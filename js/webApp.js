@@ -138,3 +138,28 @@ togglers.forEach((toggler) => {
     else{togglerToggledChild.remove(toggler.nextElementSibling);}
   });
 });
+let counterParam = 0;
+function showMenu(){
+    let menu=document.getElementById("menu_param");
+    if (counterParam===0){
+        menu.style.visibility="visible";
+        document.getElementById('body').style.overflowY = "hidden";
+        counterParam++;
+    }
+    else{
+        counterParam=0;
+        menu.style.visibility="hidden";
+        document.getElementById('body').style.overflowY = "scroll";
+    }
+    
+    
+}
+const popup = document.querySelector('.full-screen');
+
+function showPopup(){
+  popup.classList.remove('hidden');
+}
+
+function closePopup(){
+  popup.classList.add('hidden');
+}

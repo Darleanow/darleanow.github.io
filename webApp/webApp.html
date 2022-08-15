@@ -16,7 +16,7 @@
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     </head>
 
-    <body>
+    <body id="body">
     <!--NAV TOUTE A GAUCHE-->
         <div class="wrapper_left_menu">
             <div class="wrapper_topleft_menu">
@@ -30,9 +30,17 @@
                 <span id="netBut" class="material-symbols-outlined left_menu_link" style="padding-left: 2px;margin-top: 18px;">network_check
                     <span class="infoHover">Réseau</span>
                 </span>
-                <span class="material-symbols-outlined left_menu_link topleft_menu_bottom">settings
+                <span class="material-symbols-outlined left_menu_link topleft_menu_bottom" onclick="showPopup()">settings
                     <span class="infoHover">Paramètres</span>
                 </span><!--TOUT EN BAS--><!--AJOUTER LIEN ICONS-->
+                <span id="menu_param" class="params_Menu">
+                    <div class="param_container">
+                        <div class="full-screen hidden flex-container-center">
+                            <h2 >Let me tell you about this thing!!</h2>
+                            <button onclick="closePopup()">Close Popup!</button>
+                          </div>
+                    </div>
+                </span>
             </div>
         </div>
 
