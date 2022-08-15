@@ -1,0 +1,281 @@
+/*IMPORTANT : QUAND AJOUT D' ELEMENT, CHANGER LE PADDING POUR QUE CA FIT CORRECTEMENT SINON BUGS :) */
+
+/*TROUVER POLICE*/
+/*
+Aucun fichier ouvert couleur : ababb3
+Barre en dessous navbar main : 3f307e
+texte sur main : 727174
+*/
+
+/*
+FIX NEEDED
+Barre responsive quand on descend la taille (probleme n'affecte aucun tel presque
+hover du boutton parametres -> tooltip trop basse
+
+
+*/
+:root {
+	--padding_to_change_on_publish : 100px;
+	--left_menu_background_reduced: #17171b;
+	--left_menu_background_expanded: #121114;
+	--second_left_menu_background: #1f1f21;
+	--main_background: #29292e;
+	--second_search_background: #121115;
+	--icon_color: #7e7e7e;
+	--icon_color_hover: #999999;
+	--info_hover_color: rgb(0, 0, 0);
+	--info_hover_textcolor: rgb(214, 214, 214);
+	--wrapper_second_left_menu_bordercolor: #2f2847;
+	--wrapper_second_left_menu_backgroundcolor: #211f22;
+	--wrapper_second_left_menu_title: rgb(207, 207, 207);
+	--wrapper_second_left_menu_foldercolor: #7e7e7e;
+	--font_family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	--tree_view_active_hover : rgb(19, 19, 19);
+	--scroll_bar_color : #554a8b;
+	--main_content_border_color :#554a8b;
+	--paragraph_text_color:rgb(235, 235, 235);
+}
+
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+	font-family: var(--font_family);
+}
+
+body {
+	background-color: #282629 !important;
+	overflow-x: hidden;
+}
+
+.wrapper_left_menu {
+	z-index: 1;
+	height: 100%;
+	width: 30px;
+	/*A CHANGER SI BESOIN*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: var(--left_menu_background_reduced);
+}
+
+.left_menu_link {
+	user-select: none;
+	position: static;
+	color: var(--icon_color);
+}
+
+.left_menu_link:hover {
+
+	cursor: pointer;
+	color: var(--icon_color_hover);
+}
+
+.infoHover {
+	color: var(--info_hover_textcolor);
+	background-color: var(--info_hover_color);
+	font-family: var(--font_family);
+	font-size: 0.7em;
+    font-weight: bold;
+    margin-top: -3px;
+	padding: 7px 19px;
+	border-radius: 7px;
+}
+
+/*Pas de moi*/
+.left_menu_link:hover .infoHover::after {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent var(--info_hover_color) transparent transparent;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+.left_menu_link .infoHover {
+	display: none;
+}
+
+.left_menu_link:hover .infoHover {
+	position: absolute;
+	display: inline-block;
+	margin-left: 12px;
+}
+
+.topleft_menu_bottom {
+	position: absolute;
+	bottom: 10px !important;
+	left: 2px;
+}
+
+.wrapper_second_left_menu {
+	position: fixed;
+	margin-left: 30px;
+	width: 340px;
+	height: 100%;
+	background-color: var(--wrapper_second_left_menu_backgroundcolor);
+	border: 2px solid var(--wrapper_second_left_menu_bordercolor);
+	
+}
+
+.wrapper_second_left_menu_icon {
+	position: absolute;
+	top: 27px;
+	padding-bottom: 40px;
+	left: 80px;
+}
+
+.wrapper_second_left_menu_title {
+	position: absolute;
+	user-select: none;
+	cursor: default;
+	top: 27.20589px;
+	left: 120px;
+	color: var(--wrapper_second_left_menu_title);
+	font-size: 18px;
+    font-weight: bold;
+	font-family: var(--font_family);
+
+}
+
+.second_left_menu_link {
+	cursor: default;
+	user-select: none;
+	color: var(--icon_color);
+	margin-left: 5px;
+}
+
+.active {
+	visibility: visible;
+}
+
+.inactive {
+	visibility: hidden;
+}
+
+.wrapper_tree_view{
+    display:flex;
+    margin-top: 90px;
+    padding-left: 25px;
+    color:var(--wrapper_second_left_menu_foldercolor);
+    font-family: var(--font_family);
+    font-weight: 549;
+    font-size:18px;
+}
+
+.element_active_tree{
+	background-color: var(--tree_view_active_hover);
+	border-radius: 5px;
+}
+ul {
+    list-style-type: none;
+  }
+  
+.firstParent:hover {
+    cursor: pointer;
+
+}
+.childElem{
+	padding-right: var(--padding_to_change_on_publish);
+}
+.childElem::before {
+    content: "";
+    display: absolute;
+    margin-right: 0.5rem;
+}
+  
+.childElem:hover{
+	background-color: var(--tree_view_active_hover);
+	cursor:pointer;
+	border-radius: 5px;
+}
+  
+.childElem.active::before {
+    content: "";
+}
+  
+/* toggler */
+.toggler::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.toggler.active::before {
+    transform: rotate(90deg);
+}
+  
+.toggler-target {
+    display: none;
+	overflow-y: auto;
+}
+  
+.toggler-target.active {
+    display: block;
+}
+
+
+
+.wrapper_tree_view{
+	height:85vh;
+	margin-right:1px;
+	overflow-y: scroll;	
+  	scrollbar-width:10px;
+}
+
+.main_content_wrapper{
+	width: 100vw;
+	height:100vh;
+	background-color: #282629!important;
+}
+
+.main_content{
+	margin-left: 370px;
+	
+	
+}
+
+.main_content_title{
+
+	font-size: 32px;
+	padding-left: 50px;
+	padding-top: 10px;
+	border-bottom: 3px solid var(--main_content_border_color);
+	color:#d3d3d3;
+}
+
+.paragraph_content_text{
+	font-size:20px;
+	font-weight: 500;
+	color: var(--paragraph_text_color);
+	padding-left: 30px;
+	padding-right:15px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+  
+::-webkit-scrollbar-track {
+	width:2px;
+	border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	width:3.5px;
+	border: 1.5px solid transparent;
+	background-clip: content-box;
+	background-color: var(--scroll_bar_color);
+}
