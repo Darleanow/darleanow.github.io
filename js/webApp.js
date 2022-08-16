@@ -163,3 +163,51 @@ function showPopup(){
 function closePopup(){
   popup.classList.add('hidden');
 }
+
+let actualTheme = 0;
+
+function changeTheme(){
+
+    if (actualTheme==0){
+        actualTheme=1;
+        document.documentElement.style.setProperty('--left_menu_background_reduced', '#dbdbdb');
+        document.documentElement.style.setProperty('--left_menu_background_expanded', '#d6d6d6');
+        document.documentElement.style.setProperty('--second_left_menu_background', '#aaaaaa');
+        document.documentElement.style.setProperty('--main_background', '#cacaca');
+        document.documentElement.style.setProperty('--second_search_background', '#e3e1e7');
+        document.documentElement.style.setProperty('--icon_color', '#202020');
+        document.documentElement.style.setProperty('--icon_color_hover', '#3b3b3b');
+        document.documentElement.style.setProperty('--info_hover_textcolor', 'rgb(196, 196, 196)');
+        document.documentElement.style.setProperty('--wrapper_second_left_menu_bordercolor', '#7162a3');
+        document.documentElement.style.setProperty('--wrapper_second_left_menu_backgroundcolor', '#cccccc');
+        document.documentElement.style.setProperty('--wrapper_second_left_menu_title', 'rgb(19, 19, 19)');
+        document.documentElement.style.setProperty('--wrapper_second_left_menu_foldercolor', '#161616');
+        document.documentElement.style.setProperty('--tree_view_active_hover', 'rgb(153, 153, 153)');
+        document.documentElement.style.setProperty('--scroll_bar_color', '#554a8b');
+        document.documentElement.style.setProperty('--main_content_border_color', '#554a8b');
+        document.documentElement.style.setProperty('--paragraph_text_color', 'rgb(19, 19, 19)');
+        document.documentElement.style.setProperty('--main_content_background', '#b8b8b8');
+        document.documentElement.style.setProperty('--main_content_title', '#1a1a1a');
+    }
+    else if (actualTheme==1){
+        actualTheme=0;
+        document.documentElement.style.setProperty('--left_menu_background_reduced', '#17171b');
+        document.documentElement.style.setProperty('--left_menu_background_expanded', '#121114');
+        document.documentElement.style.setProperty('--second_left_menu_background', '#1f1f21');
+        document.documentElement.style.setProperty('--main_background', '#29292e');
+        document.documentElement.style.setProperty('--second_search_background', '#121115');
+        document.documentElement.style.setProperty('--icon_color', '#7e7e7e');
+        document.documentElement.style.setProperty('--icon_color_hover', '#999999');
+        document.documentElement.style.setProperty('--info_hover_textcolor', 'rgb(214, 214, 214)');
+        document.documentElement.style.setProperty('--wrapper_second_left_menu_bordercolor', '#2f2847');
+        document.documentElement.style.setProperty('--wrapper_second_left_menu_backgroundcolor', '#211f22');
+        document.documentElement.style.setProperty('--wrapper_second_left_menu_title', 'rgb(207, 207, 207)');
+        document.documentElement.style.setProperty('--wrapper_second_left_menu_foldercolor', '#7e7e7e');
+        document.documentElement.style.setProperty('--tree_view_active_hover', 'rgb(19, 19, 19)');
+        document.documentElement.style.setProperty('--scroll_bar_color', '#554a8b');
+        document.documentElement.style.setProperty('--main_content_border_color', '#554a8b');
+        document.documentElement.style.setProperty('--paragraph_text_color', 'rgb(235, 235, 235)');
+        document.documentElement.style.setProperty('--main_content_background', '#282629');
+        document.documentElement.style.setProperty('--main_content_title', '#d3d3d3');
+    }
+}
