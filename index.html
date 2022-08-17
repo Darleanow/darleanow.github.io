@@ -5,6 +5,7 @@
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<link href="css/colors.css" rel="stylesheet">
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css" rel="stylesheet">
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<title></title>
 </head><!--HEADER
 
@@ -79,9 +80,9 @@
 					Ce que vous y trouverez :
 				</div>
 				<div class="positionContent"><br>
-					<a class="contactButton" href="webApp/">- Algo / Dev / Réseau</a><br>
+					<a class="contactButton" href="webApp/">- Des cours</a><br>
 					<a class="contactButton" href="https://github.com/Darleanow?tab=repositories">- Mes projets</a><br>
-          			<a id="aProposButton" class="contactButton" href="#">- A propos</a>
+          			<a id="aProposButton" class="contactButton" href="#">- Qui je suis</a>
 				</div>
 			</div>
 		</div>
@@ -127,7 +128,7 @@
 									<input class="app-form-control form_input" id="formMessage" placeholder="Message">
 								</div>
 								<div class="app-form-group buttons">
-									<button class="app-form-button form_button" id="cancelButton">Annuler</button> <button class="app-form-button form_button" id="sendButton">Envoyer</button>
+									<button class="app-form-button form_button" id="cancelButton">Annuler</button> <button class="app-form-button form_button" id="sendButton" onclick="sendEmail()">Envoyer</button>
 								</div>
 							</div>
 						</div>

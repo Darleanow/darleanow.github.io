@@ -1,7 +1,14 @@
 Fixes :
 
 -Format responsive pour webApp
+-Changer épaisseur du texte bienvenue
+-modifier boutton (degeu quand responsive)
+-format responsive sur mes infos perso
+-lorsque l'on clique sur un boutton sur webapp, le texte reste
 
 Fonctionalités :
 
 -Modifier menu param dans webApp (degeulasse)
+-refermer le menu lorsque l'on clique sur un elem (barre de nav)
+-envoi de mail sur contacter moi
+-pouvoir fermer le deuxieme menu (fleche a rajouter)
