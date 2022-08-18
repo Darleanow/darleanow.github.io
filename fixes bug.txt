@@ -7,5 +7,5 @@ Fixes :
 
 Fonctionalités :
 
--Modifier menu param dans webApp (degeulasse)
+-Refonte menu paramètres de webApp
 -refermer le menu lorsque l'on clique sur un elem (barre de nav)
