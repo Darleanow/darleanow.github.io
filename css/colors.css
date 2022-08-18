@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
  html, body {
      padding: 0;
      margin: 0px;
@@ -760,7 +759,7 @@
 }
  .nav ul li a:hover{
      text-decoration: none;
-     color: #3c3644;
+     color: #664e6b;
      cursor:pointer;
 }
  .nav ul li a:after{
@@ -768,11 +767,11 @@
      position: absolute;
      top: 50%;
      content: '';
-     height: 2vh;
-     margin-top: -1vh;
+     height: 1vh;
+     margin-top: 3.9vh;
      width: 0;
      left: 0;
-     background-color: #353746;
+     background-color: #5a4766;
      opacity: 0.8;
      transition: width 250ms linear;
 }

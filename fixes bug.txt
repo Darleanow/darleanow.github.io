@@ -1,7 +1,6 @@
 Fixes :
 
 -Format responsive pour webApp
--modifier boutton (degeu quand responsive)
 -format responsive sur mes infos perso
 -lorsque l'on clique sur un boutton sur webapp, le texte reste
 
@@ -9,3 +8,16 @@ Fonctionalités :
 
 -Refonte menu paramètres de webApp
 -refermer le menu lorsque l'on clique sur un elem (barre de nav)
+
+
+Site principal :
+-changer la taille du texte du premier boutton et changer son format quand le site est rétrecit car il est degeu
+
+deuxieme page :
+-un peu + fancy ?
+
+troisieme page:
+ébauche de map pour voir projets ?
+
+cinquieme page:
+ameliorer la gueule du machin
