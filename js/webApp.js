@@ -210,29 +210,6 @@ function changeTheme(){
         document.documentElement.style.setProperty('--main_content_title', '#d3d3d3');
     }
 }
-
-
-let stack = document.getElementById('stack');let stackBut = document.getElementById('stackBut');
-let queue = document.getElementById('queue');let queueBut = document.getElementById('queueBut');
-let deque = document.getElementById('deque');let dequeBut = document.getElementById('dequeBut');
-
-
-stackBut.onclick = function(){
-    stack.classList.remove('off');stack.classList.add('on');
-    queue.classList.remove('on');queue.classList.add('off');
-    deque.classList.remove('on');deque.classList.add('off');
-};
-queueBut.onclick = function(){
-    stack.classList.remove('on');stack.classList.add('off');
-    queue.classList.remove('off');queue.classList.add('on');
-    deque.classList.remove('on');deque.classList.add('off');
-};
-dequeBut.onclick = function(){
-    stack.classList.remove('on');stack.classList.add('off');
-    queue.classList.remove('on');stack.classList.add('off');
-    deque.classList.remove('off');deque.classList.add('on');
-};
-
 let second_menu = document.getElementById('second_menu');
 let main_content = document.getElementById('main_content')
 let border_first_menu = document.getElementById('first_menu');
@@ -254,3 +231,25 @@ open.onclick = function(){
     main_content.style.marginLeft = '370px';
     border_first_menu.style.borderRight = '';
 }
+
+let stack = document.getElementById('stack');let stackBut = document.getElementById('stackBut');
+let queue = document.getElementById('queue');let queueBut = document.getElementById('queueBut');
+let deque = document.getElementById('deque');let dequeBut = document.getElementById('dequeBut');
+
+
+stackBut.onclick = function(){
+    stack.classList.remove('off');stack.classList.add('on');
+    queue.classList.remove('on');queue.classList.add('off');
+    deque.classList.remove('on');deque.classList.add('off');
+};
+queueBut.onclick = function(){
+    stack.classList.remove('on');stack.classList.add('off');
+    queue.classList.remove('off');queue.classList.add('on');
+    deque.classList.remove('on');deque.classList.add('off');
+};
+dequeBut.onclick = function(){
+    stack.classList.remove('on');stack.classList.add('off');
+    queue.classList.remove('on');queue.classList.add('off');
+    deque.classList.remove('off');deque.classList.add('on');
+};
+
