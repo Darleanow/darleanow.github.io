@@ -1,123 +1,97 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<link href="css/colors.css" rel="stylesheet">
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css" rel="stylesheet">
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-	<title></title>
-</head><!--HEADER
-
- body ==> 
-
--->
-
-<input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
-<label for="menu-icon"></label>
-<nav class="nav"> 		
-	<ul class="pt-5">
-		<li><a id="contentNAV" >Contenu</a></li>
-		<li><a id="dsaNAV" href="./webApp/">Apprendre</a></li>
-		<li><a id="projetsNAV" href="https://github.com/Darleanow?tab=repositories">Projets</a></li>
-		<li><a id="contactNAV" >Me contacter</a></li>
-		<li><a id="aProposNAV" >A propos</a></li>
-	</ul>
-</nav>
-
-<body id="KeysImplementation">
-  
-	<div class="scroll first_page">
-		<!--<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-      <a class="navbar-brand" >DW</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="hoverType nav-item">
-            <a id="accueilButton" class="nav-link"  onMouseOver="this.style.color='white'"onMouseOut="this.style.color='#282828'">Accueil</a>
-          </li>
-          <li class="hoverType nav-item">
-            <a id="contentButton" class="nav-link"  onMouseOver="this.style.color='white'"onMouseOut="this.style.color='#282828'">Contenu</a>
-          </li>
-          <li class="hoverType nav-item">
-            <a id="proposButton" class="nav-link"  onMouseOver="this.style.color='white'"onMouseOut="this.style.color='#282828'">A propos</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a id="meContacter"class="nav-link contactButton" >Me contacter</a>
-              </li></ul></div>
-        </form>
-
-      </div>
-    </nav>-->
-    
-		<div class="wrapperWELCOMEbutton">
-			<h1 class="welcome">Bienvenue dans mon<br>
-			monde !</h1><button class="fpButton" id="knowMore">
-			<div class="pastille"></div><span class="btSpan">En savoir +</span></button>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<link href="css/colors.css" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css" rel="stylesheet">
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+		<title></title>
+	</head>
+	<!--HEADER
+		body ==> 
+		
+		-->
+	<input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+	<label id="labelClose" for="menu-icon"></label>
+	<nav class="nav">
+		<ul class="pt-5">
+			<li><a id="contentNAV">Contenu</a></li>
+			<li><a id="dsaNAV" href="./webApp/">Apprendre</a></li>
+			<li><a id="projetsNAV" href="https://github.com/Darleanow?tab=repositories">Projets</a></li>
+			<li><a id="contactNAV">Me contacter</a></li>
+			<li><a id="aProposNAV">A propos</a></li>
+		</ul>
+	</nav>
+	<body id="KeysImplementation">
+		<div class="scroll first_page">
+			<div class="wrapperWELCOMEbutton">
+				<h1 class="welcome">Bienvenue dans mon<br>
+					monde !
+				</h1>
+				<button class="fpButton" id="knowMore">
+					<div class="pastille"></div>
+					<span class="btSpan">En savoir +</span>
+				</button>
+			</div>
 		</div>
-	</div>
-	<div class="scroll second_page">
-		<div class="wrapperSecondPage">
-			<div class="mainContent">
-				<div class="secondPageText">
-					Ce que vous y trouverez :
-				</div>
-				<div class="positionContent"><br>
-					<a class="contactButton" href="webApp/">- Des cours</a><br>
-					<a class="contactButton" href="https://github.com/Darleanow?tab=repositories">- Mes projets</a><br>
-          			<a id="aProposButton" class="contactButton">- A propos</a>
+		<div class="scroll second_page">
+			<div class="wrapperSecondPage">
+				<div class="mainContent">
+					<div class="secondPageText">
+						Ce que vous y trouverez :
+					</div>
+					<div class="positionContent"><br>
+						<a class="contactButton" href="webApp/">- Des cours</a><br>
+						<a class="contactButton" href="https://github.com/Darleanow?tab=repositories">- Mes projets</a><br>
+						<a id="aProposButton" class="contactButton">- A propos</a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="scroll third_page"></div>
-	<div class="scroll contact_form" id="contactForm">
-		<div class="background">
-			<div class="container">
-				<div class="screen">
-					<div class="screen-header">
-						<div class="screen-header-left">
-							<div class="screen-header-button cancel"></div>
-							<div class="screen-header-button maximize"></div>
-							<div class="screen-header-button minimize"></div>
-						</div>
-						<div class="screen-header-right">
-							<div class="screen-header-ellipsis"></div>
-							<div class="screen-header-ellipsis"></div>
-							<div class="screen-header-ellipsis"></div>
-						</div>
-					</div>
-					<div class="screen-body">
-						<div class="screen-body-item left">
-							<div class="app-title">
-								<span>Contactez</span> <span>moi !</span>
+		<div class="scroll third_page"></div>
+		<div class="scroll contact_form" id="contactForm">
+			<div class="background">
+				<div class="container">
+					<div class="screen">
+						<div class="screen-header">
+							<div class="screen-header-left">
+								<div class="screen-header-button cancel"></div>
+								<div class="screen-header-button maximize"></div>
+								<div class="screen-header-button minimize"></div>
 							</div>
-							<div class="app-contact">
-								INFO CONTACT : +33 6 52 00 32 57
+							<div class="screen-header-right">
+								<div class="screen-header-ellipsis"></div>
+								<div class="screen-header-ellipsis"></div>
+								<div class="screen-header-ellipsis"></div>
 							</div>
 						</div>
-						<div class="screen-body-item">
-							<div class="app-form">
-								<div class="app-form-group">
-									<input class="app-form-control form_input" id="formName" placeholder="Nom">
+						<div class="screen-body">
+							<div class="screen-body-item left">
+								<div class="app-title">
+									<span>Contactez</span> <span>moi !</span>
 								</div>
-								<div class="app-form-group">
-									<input class="app-form-control form_input" id="formMail" placeholder="Mail">
+								<div class="app-contact">
+									INFO CONTACT : +33 6 52 00 32 57
 								</div>
-								<div class="app-form-group">
-									<input class="app-form-control form_input" id="formNum" placeholder="Numéro">
-								</div>
-								<div class="app-form-group message">
-									<input class="app-form-control form_input" id="formMessage" placeholder="Message">
-								</div>
-								<div class="app-form-group buttons">
-									<button class="app-form-button form_button" id="cancelButton">Annuler</button> <button class="app-form-button form_button" id="sendButton" onclick="sendEmail()">Envoyer</button>
+							</div>
+							<div class="screen-body-item">
+								<div class="app-form">
+									<div class="app-form-group">
+										<input class="app-form-control form_input" id="formName" placeholder="Nom">
+									</div>
+									<div class="app-form-group">
+										<input class="app-form-control form_input" id="formMail" placeholder="Mail">
+									</div>
+									<div class="app-form-group">
+										<input class="app-form-control form_input" id="formNum" placeholder="Numéro">
+									</div>
+									<div class="app-form-group message">
+										<input class="app-form-control form_input" id="formMessage" placeholder="Message">
+									</div>
+									<div class="app-form-group buttons">
+										<button class="app-form-button form_button" id="cancelButton">Annuler</button> <button class="app-form-button form_button" id="sendButton" onclick="sendEmail()">Envoyer</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -125,20 +99,17 @@
 				</div>
 			</div>
 		</div>
-	</div>
-  <div class="scroll fifth_page" id="aPropos">
-	<div class="container_profile">
-		<div class="profile">
-			Jeune développeur, je suis passionné par le développement, notamment en C++.<br>
-			J'aime les maths ainsi que l'algorithmie (vous pouvez trouver des cours en cliquant sur apprendre ^^).<br>
-			J'éssaie d'évoluer en même temps que les technologies afin d'être toujours a jour; les principaux domaines m'intéressant étant le développement de jeu et l'intelligence artificielle.<br>
-			Vous pouvez trouver mon CV en cliquant <a class="linkHover" href="./documents/resume.pdf">ici</a>.
+		<div class="scroll fifth_page" id="aPropos">
+			<div class="container_profile">
+				<div class="profile">
+					Jeune développeur, je suis passionné par le développement, notamment en C++.<br>
+					J'aime les maths ainsi que l'algorithmie (vous pouvez trouver des cours en cliquant sur apprendre ^^).<br>
+					J'éssaie d'évoluer en même temps que les technologies afin d'être toujours a jour; les principaux domaines m'intéressant étant le développement de jeu et l'intelligence artificielle.<br>
+					Vous pouvez trouver mon CV en cliquant <a class="linkHover" href="./documents/resume.pdf">ici</a>.
+				</div>
+			</div>
 		</div>
-	</div>
-  </div>
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js">
-	</script> 
-	<script src="js/jsthings.js">
-	</script>
-</body>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script> 
+		<script src="js/jsthings.js"></script>
+	</body>
 </html>

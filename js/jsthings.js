@@ -187,28 +187,28 @@ document.getElementById("sendButton").onclick = function() {
 		let sender = document.querySelector('#formMail').value;
 		let num = document.querySelector('#formNum').value;
 		let msg = document.querySelector('#formMessage').value;
-		let body = "De la part de "+name+":<br>"+msg+"<br><br>Numero: "+num+"<br><br>Email: "+sender;
+		let body = "De la part de " + name + ":<br>" + msg + "<br><br>Numero: " + num + "<br><br>Email: " + sender;
 		console.log(body);
 		const data = JSON.stringify({
 			"toAddress": "darleanowreceive@yahoo.com",
 			"title": "Nouveau message !",
 			"message": body
 		});
-		
+
 		const xhr = new XMLHttpRequest();
 		xhr.withCredentials = true;
-		
-		xhr.addEventListener("readystatechange", function () {
+
+		xhr.addEventListener("readystatechange", function() {
 			if (this.readyState === this.DONE) {
 				console.log(this.responseText);
 			}
 		});
-		
+
 		xhr.open("POST", "https://hourmailer.p.rapidapi.com/send");
 		xhr.setRequestHeader("content-type", "application/json");
 		xhr.setRequestHeader("X-RapidAPI-Key", "90c5d10aa7mshd8033948e428890p1bb70djsn4920dd2ba317");
 		xhr.setRequestHeader("X-RapidAPI-Host", "hourmailer.p.rapidapi.com");
-		
+
 		xhr.send(data);
 	} else {
 		if (formNameValid == 0) {
@@ -225,40 +225,42 @@ document.getElementById("sendButton").onclick = function() {
 document.getElementById("cancelButton").onclick = function() {
 	scrollBackToIndex();
 }
-document.getElementById("contactNAV").onclick = function ()
-{
-  scrollToBottom();
+document.getElementById("contactNAV").onclick = function() {
+	scrollToBottom();
+	document.getElementById('labelClose').click();
 }
 document.getElementById("knowMore").onclick = function() {
 	firstPageButton();
 }
 
-document.getElementById("contentNAV").onclick = function(){
-  index=1;
-  scroll[0].style.marginTop = "-" + index * 100 + "vh";
-  animationEnd = false;
-  setTimeout(() => animationEnd = true,450);
-}
-document.getElementById("aProposNAV").onclick =function(){
-    actualindex = index;
-    index = scroll.length - 1;
-    scroll[0].style.marginTop = "-" + index * 100 + "vh";
-    animationEnd = false;
-    setTimeout(() => animationEnd = true, 450);
-}
-document.getElementById('aProposButton').onclick = function(){
-	index = 4;
-	scroll[0].style.marginTop =  "-" + index * 100 + "vh";
+document.getElementById("contentNAV").onclick = function() {
+	index = 1;
+	scroll[0].style.marginTop = "-" + index * 100 + "vh";
 	animationEnd = false;
-	setTimeout(() => animationEnd = true,450);
+	setTimeout(() => animationEnd = true, 450);
+	document.getElementById('labelClose').click();
 }
-document.getElementById("goToHome").onclick = function(){
-  index=0;
-  scroll[0].style.marginTop = "-" + index * 100 + "vh";
-  animationEnd = false;
-  setTimeout(() => animationEnd = true,450);
+document.getElementById("aProposNAV").onclick = function() {
+	actualindex = index;
+	index = scroll.length - 1;
+	scroll[0].style.marginTop = "-" + index * 100 + "vh";
+	animationEnd = false;
+	setTimeout(() => animationEnd = true, 450);
+	document.getElementById('labelClose').click();
+}
+document.getElementById('aProposButton').onclick = function() {
+	index = 4;
+	scroll[0].style.marginTop = "-" + index * 100 + "vh";
+	animationEnd = false;
+	setTimeout(() => animationEnd = true, 450);
+}
+document.getElementById("goToHome").onclick = function() {
+	index = 0;
+	scroll[0].style.marginTop = "-" + index * 100 + "vh";
+	animationEnd = false;
+	setTimeout(() => animationEnd = true, 450);
 }
 
-document.getElementById('a_venir_card').onclick = function(){
-    Swal.fire('Bientôt...', '- Projets (en cours)<br>- Tutoriels<br>- format entierement responsive<br>- Visualisation du code au sein du site', 'warning')
+document.getElementById('a_venir_card').onclick = function() {
+	Swal.fire('Bientôt...', '- Projets (en cours)<br>- Tutoriels<br>- format entierement responsive<br>- Visualisation du code au sein du site', 'warning')
 }
