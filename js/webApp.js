@@ -232,3 +232,25 @@ dequeBut.onclick = function(){
     queue.classList.remove('on');stack.classList.add('off');
     deque.classList.remove('off');deque.classList.add('on');
 };
+
+let second_menu = document.getElementById('second_menu');
+let main_content = document.getElementById('main_content')
+let border_first_menu = document.getElementById('first_menu');
+
+let open = document.getElementById('hide_menu');
+let close = document.getElementById('view_menu');
+
+close.onclick = function(){
+    close.classList.remove('on');close.classList.add('off');
+    open.classList.remove('off');open.classList.add('on');
+    second_menu.style.display ='none';
+    main_content.style.marginLeft = '30px';
+    border_first_menu.style.borderRight = '2px solid #2f2847';
+}
+open.onclick = function(){
+    close.classList.remove('off');close.classList.add('on');
+    open.classList.remove('on');open.classList.add('off');
+    second_menu.style.display = '';
+    main_content.style.marginLeft = '370px';
+    border_first_menu.style.borderRight = '';
+}

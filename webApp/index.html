@@ -18,9 +18,15 @@
 
     <body id="body">
     <!--NAV TOUTE A GAUCHE-->
-        <div class="wrapper_left_menu">
+        <div id="first_menu" class="wrapper_left_menu">
             <div class="wrapper_topleft_menu">
                 <!--REDUIT LE DEUXIEME WRAPPER-->
+                <span id="view_menu" class="material-symbols-outlined left_menu_link on" style="padding-left: 4px;padding-top: 40px;position: absolute;">arrow_forward_ios
+                    <span class="infoHover">Fermer le menu</span>
+                </span>
+                <span id="hide_menu" class="material-symbols-outlined left_menu_link open_menu off" style="padding-left: 4px;padding-top: 40px;position: absolute;">arrow_back_ios
+                    <span class="infoHover">Ouvrir le menu</span>
+                </span>
                 <span id="algoBut" class="material-symbols-outlined left_menu_link" style="padding-left: 2px;margin-top: 100px;">functions
                     <span class="infoHover">Algorithmie</span>
                 </span>
@@ -65,12 +71,8 @@
             </div>
         </div>
 
-    <div class="wrapper_second_left_menu">
-        <!--PAS SUR ENCORE
-        <div class="wrapper_navbar_second_left_menu">
-            <p>Recherche</p>
-        </div>
-        -->
+    <div id="second_menu"class="wrapper_second_left_menu">
+        
         <div class="wrapper_second_fileExplorer">
             
             <div id="algo" class="title_second_wrapper active">
@@ -81,7 +83,7 @@
                         <div id="first_parent" class="toggler firstParent">Méthodes</div>
                             <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
                                 <li id="stackBut" class="childElem">Stack</li>
-                                <li id="queueBut" class="childElem">Queues</li>
+                                <li id="queueBut" class="childElem">Files</li>
                                 <li id="dequeBut" class="childElem">Deque</li>
                                 <li id="linkBut" class="childElem">Linked list</li>
                                 <li id="hashBut" class="childElem">Hash table</li>
@@ -158,7 +160,7 @@
             </div>
         </div>
     </div>
-    <div class="main_content_wrapper">
+    <div id="main_content" class="main_content_wrapper">
         <div id="stack" class="main_content off">
             <div class="line_holder">
                 <p class="main_content_title">\ Stack </p>
@@ -203,17 +205,25 @@
         </div>
         <div id="queue" class="main_content off">
             <div class="line_holder">
-                <p class="main_content_title">\ Test</p>
+                <p class="main_content_title">\ File</p>
             </div>
             <div class="wrapper_article_content">
                 <p class="paragraph_content_text">
-                    LOREMP IPSUM EJEJJEJEJE.
+                    
+                </p> 
+            </div> 
+        </div>
+        <div id="deque" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Deque</p>
+            </div>
+            <div class="wrapper_article_content">
+                <p class="paragraph_content_text">
+                    
                 </p> 
             </div> 
         </div>
     </div>
-    
-    
     <!--
     <div class="wrapper_main">
         <div class="wrapper_main_navbar">

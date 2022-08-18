@@ -235,10 +235,11 @@ ul {
 	width: 100%;
 	height:100vh;
 	background-color: var(--main_content_background)!important;
+	margin-left: 370px;
 }
 
 .main_content{
-	margin-left: 370px;
+	
 	width: 100%;
 }
 .main_content_title{

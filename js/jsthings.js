@@ -260,6 +260,6 @@ document.getElementById("goToHome").onclick = function(){
 }
 
 document.getElementById('a_venir_card').onclick = function(){
-    Swal.fire('Bientôt...', '- Projets (en cours)<br>- Tutoriels<br>- Theme blanc pour webApp<br>- format entierement responsive', 'warning')
+    Swal.fire('Bientôt...', '- Projets (en cours)<br>- Tutoriels<br>- format entierement responsive', 'warning')
 }
 
