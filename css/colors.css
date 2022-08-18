@@ -352,6 +352,7 @@ html, body {
 	}
 }
 .contactButton {
+	cursor:pointer;
 	color: white !important;
 	border-radius: 0.4rem;
 	background-color: #33333a;
