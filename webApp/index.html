@@ -167,11 +167,11 @@
             </div>
             <div class="wrapper_article_content">  
                 <p class="paragraph_content_text">
-                    La stack est une méthode en Algorithmie, elle est beaucoup utilisée notamment dans le web, que nous verrons plus tard.<br>
+                    La stack (ou pile) est une méthode en Algorithmie, elle est beaucoup utilisée notamment dans le web, que nous verrons plus tard.<br>
                     Concretement une stack est un empilement, les méthodes qui lui sont associées permettent d'y ajouter un élément, et de retirer le dernier élément ajouté.<br>
                     Cela fonctionne un peu comme une pile d'assiettes, vous pouvez en rajouter une, et enlever la dernière.<br>
                     La maniere la plus simple d'implémenter une stack est d'utiliser une méthode d'array.<br>
-                    La stack possede une complexité de O(1).<br>
+                    La stack possede une complexité de O(n).<br>
                     A savoir que la librairie standard possède une méthode de stack.
                     <br><br><br>
                     Applications :<br><br>
@@ -205,11 +205,41 @@
         </div>
         <div id="queue" class="main_content off">
             <div class="line_holder">
-                <p class="main_content_title">\ File</p>
+                <p class="main_content_title">\ Files</p>
             </div>
             <div class="wrapper_article_content">
                 <p class="paragraph_content_text">
-                    
+                    Une file est une méthode d'algorithmie similaire aux queues que l'on peut retrouver dans les cinémas. <br>
+                    La personne tout devant aura son ticket avant la dernière personne. <br> <br>
+                    La structure file respecte la règle FIFO (First In First Out), en effet, le premier élément est aussi le premier à sortir. <br> <br>
+                    A savoir que la librairie Standard C++ propose une méthode de file.<br>
+                    La file possède une complexité de O(n).
+
+                    Il existe plusieurs méthodes associées a la file : <br>
+                    &emsp;-l'enfile  => Ajout d'items dans la file <br>
+                    &emsp;-la défile => Enlèvement d'items de la file <br>
+                    &emsp;-Peek      => Récuperer la valeur du devant de la file sans l'enlever (contrairement a la méthode "pop" qui elle l'enlève aussi).<br>
+                    <br> <br>
+
+                    Fonctionnement d'une file : <br>
+                    &emsp;- Deux pointeurs "FRONT" et "REAR" (front = devant ; rear = arrière) <br>
+                    &emsp;- Le pointeur "FRONT" traque le premier élément de la file <br>
+                    &emsp;- Le pointeur "REAR" traque le dernier élément de la file <br>
+                    &emsp;- Lors de l'init, on met la valeur de "FRONT" et "REAR" a -1
+                    <br> <br> <br>
+
+                    Opérations sur la file: <br>
+                    &emsp;- Enfile: <br>
+                    &emsp;&emsp;- On vérifie si la file est pleine. <br>
+                    &emsp;&emsp;- Pour le premier élément, on met la valeur du pointeur "FRONT" a 0. <br>
+                    &emsp;&emsp;- On augmente l'indexe du pointeur "REAR" de 1. <br>
+                    &emsp;&emsp;- Ajout de l'élément sur la position pointée par "REAR". <br> <br>
+                    &emsp;- Défile : <br>
+                    &emsp;&emsp;- On vérifie si la file est pleine. <br> 
+                    &emsp;&emsp;- On retourne la valeur pointée par "FRONT". <br> 
+                    &emsp;&emsp;- On augmente l'indexe du pointeur "FRONT" par 1. <br>
+                    &emsp;&emsp;- Pour le dernier élément, on réinitialise les valeurs de "FRONT" et "REAR" a -1. <br> <br>
+                    <a href="https://github.com/Darleanow/websiteProjects/blob/main/code_samples/Queue.cpp">Cliquez ici pour voir le code de l'exemple.</a>
                 </p> 
             </div> 
         </div>
