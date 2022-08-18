@@ -798,6 +798,7 @@ html, body {
 .nav ul li a:hover{
   text-decoration: none;
   color: #3c3644;
+  cursor:pointer;
 }
 .nav ul li a:after{
   display: block;
@@ -814,6 +815,7 @@ html, body {
 }
 .nav ul li a:hover:after{
   width: 100%;
+  
 }
 
 
