@@ -254,13 +254,53 @@ document.getElementById('aProposButton').onclick = function() {
 	animationEnd = false;
 	setTimeout(() => animationEnd = true, 450);
 }
-document.getElementById("goToHome").onclick = function() {
-	index = 0;
-	scroll[0].style.marginTop = "-" + index * 100 + "vh";
-	animationEnd = false;
-	setTimeout(() => animationEnd = true, 450);
+
+function openNav() {
+	document.getElementById("myNav").style.width = "100%";
+	setTimeout(function () {
+        document.getElementById("Keys").style.display = "block";
+    },400);
+	
+  }
+  
+function closeNav() {
+	document.getElementById("myNav").style.width = "0%";
+	document.getElementById("Keys").style.display = "none";
+  }
+document.addEventListener('keydown', evt => {
+    if (evt.key === 'Escape') {
+        closeNav();
+    }
+});
+
+let touchstartX = 0
+let touchendX = 0
+    
+function checkDirection() {
+  if (touchendX < touchstartX) alert('swiped left!')
+  if (touchendX > touchstartX) alert('swiped right!')
 }
 
-document.getElementById('a_venir_card').onclick = function() {
-	Swal.fire('Bientôt...', '- Projets (en cours)<br>- Tutoriels<br>- format entierement responsive<br>- Visualisation du code au sein du site', 'warning')
-}
+document.getElementById('myNav').addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX
+})
+
+document.getElementById('myNav').addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX
+  checkDirection()
+})
+
+document.getElementById("aPropos").addEventListener("touchstart", tapHandler);
+
+var tapedTwice = false;
+
+function tapHandler(event) {
+    if(!tapedTwice) {
+        tapedTwice = true;
+        setTimeout( function() { tapedTwice = false; }, 300 );
+        return false;
+    }
+    event.preventDefault();
+    //action on double tap goes below
+    closeNav();
+ }
