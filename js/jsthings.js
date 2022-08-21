@@ -248,59 +248,21 @@ document.getElementById("aProposNAV").onclick = function() {
 	setTimeout(() => animationEnd = true, 450);
 	document.getElementById('labelClose').click();
 }
-document.getElementById('aProposButton').onclick = function() {
-	index = 4;
-	scroll[0].style.marginTop = "-" + index * 100 + "vh";
-	animationEnd = false;
-	setTimeout(() => animationEnd = true, 450);
-}
 
-function openNav() {
-	document.getElementById("myNav").style.width = "100%";
-	setTimeout(function () {
-        document.getElementById("Keys").style.display = "block";
-    },400);
-	
-  }
-  
-function closeNav() {
-	document.getElementById("myNav").style.width = "0%";
-	document.getElementById("Keys").style.display = "none";
-  }
-document.addEventListener('keydown', evt => {
-    if (evt.key === 'Escape') {
-        closeNav();
-    }
-});
 
-let touchstartX = 0
-let touchendX = 0
-    
-function checkDirection() {
-  if (touchendX < touchstartX) alert('swiped left!')
-  if (touchendX > touchstartX) alert('swiped right!')
-}
-
-document.getElementById('myNav').addEventListener('touchstart', e => {
-  touchstartX = e.changedTouches[0].screenX
-})
-
-document.getElementById('myNav').addEventListener('touchend', e => {
-  touchendX = e.changedTouches[0].screenX
-  checkDirection()
-})
-
-document.getElementById("aPropos").addEventListener("touchstart", tapHandler);
-
-var tapedTwice = false;
-
-function tapHandler(event) {
-    if(!tapedTwice) {
-        tapedTwice = true;
-        setTimeout( function() { tapedTwice = false; }, 300 );
-        return false;
-    }
-    event.preventDefault();
-    //action on double tap goes below
-    closeNav();
- }
+ const btbt = document.querySelectorAll(".card-buttons button");  
+ const sections = document.querySelectorAll(".card-section");  
+ const card = document.querySelector(".card");  
+ const handleButtonClick = e => {  
+  const targetSection = e.target.getAttribute("data-section");  
+  const section = document.querySelector(targetSection);  
+  targetSection !== "#about" ? card.classList.add("is-active") : card.classList.remove("is-active");  
+  card.setAttribute("data-state", targetSection);  
+  sections.forEach(s => s.classList.remove("is-active"));  
+  btbt.forEach(b => b.classList.remove("is-active"));  
+  e.target.classList.add("is-active");  
+  section.classList.add("is-active");  
+ };  
+ btbt.forEach(btn => {  
+  btn.addEventListener("click", handleButtonClick);  
+ });  
