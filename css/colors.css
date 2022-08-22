@@ -245,13 +245,13 @@
      background: white;
 }
  .screen-header-button.cancel {
-     background: #5D4157;
+     background: rgb(255,69,58);
 }
  .screen-header-button.maximize {
-     background: #c7caa8;
+     background: rgb(255,214,10);
 }
  .screen-header-button.minimize {
-     background: #A8CABA;
+     background: rgb(48,209,88);
 }
  .screen-header-right {
      display: flex;
