@@ -87,7 +87,8 @@
  .contact_form {
      background: #86589b;
 }
- @media only screen and (max-width:1100px) {
+
+@media only screen and (max-width:1100px) {
      .fpButton {
          width: 9rem;
          height: 3rem;
@@ -128,15 +129,21 @@
      .welcome {
          font-size: 8vw;
          padding-top: 5vh;
+         padding-left: 10vw;
     }
 }
+
  @media only screen and (max-width:400px) {
+    .welcome{
+        padding-left: 7vw;
+        font-size: 8.5vw;
+    }
      .wrapperWELCOMEbutton {
          padding-top: 12rem;
     }
      .fpButton {
          width: 8rem;
-         height: 2rem;
+         height: 2.4rem;
          font-size: 1.1rem;
          margin-left: 54%;
     }
@@ -146,10 +153,14 @@
     }
 }
  @media only screen and (max-width:360px) {
+    .welcome{
+        padding-left: 10vw;
+        font-size: 8vw;
+    }
      .fpButton {
          margin-left: 52%;
          width: 7.7rem;
-         height: 1.8rem;
+         height: 2.12rem;
          font-size: .9rem;
     }
      .fpButton:hover {
@@ -160,6 +171,7 @@
      .welcome {
          font-size: 8vw;
          padding-top: 5vh;
+         padding-left: 2vw!important;
     }
      .fpButton {
          width: 6.5rem;
@@ -267,7 +279,7 @@
      flex-direction: column;
      position: relative;
      color: #FFF;
-     font-size: 26px;
+     font-size: 23px;
 }
  .app-title:after {
      content: '';
@@ -282,7 +294,7 @@
  .app-contact {
      margin-top: auto;
      font-size: 8px;
-     color: #888;
+     color: rgb(204, 204, 204);
 }
  .app-form-group {
      margin-bottom: 15px;
@@ -307,7 +319,7 @@
      transition: border-color .2s;
 }
  .app-form-control::placeholder {
-     color: #666;
+     color: rgb(131, 131, 131);
 }
  .app-form-control:focus {
      border-bottom-color: #ddd;
@@ -548,6 +560,7 @@
      display:flex;
      justify-content: center;
      align-items: center;
+     overflow: hidden!important;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
  @media only screen and (max-width:850){
@@ -1170,4 +1183,8 @@
     font-family: "Jost", sans-serif;  
     transition: 0.3s;  
 }  
-  
+@media screen and (max-width: 415px) {
+    .nav ul li a{
+        font-size: 6vh!important;
+    }
+}
