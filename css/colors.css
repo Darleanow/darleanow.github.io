@@ -26,7 +26,7 @@
      font-size: 4vw;
      font-weight:600;
      font-family: 'Montserrat', sans-serif;
-     color: #252525;
+     color: #202024;
      margin: 0;
      padding-left: 18%;
      padding-top: 30vh;
@@ -190,7 +190,7 @@
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
  .contact_form {
-     background: linear-gradient(to right, #535353, #7a6669);
+    background: linear-gradient(to right, #232526, #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
      font-size: 12px;
 }
@@ -245,7 +245,7 @@
      background: white;
 }
  .screen-header-button.cancel {
-     background: rgb(255,69,58);
+     background: rgb(255, 77, 68);
 }
  .screen-header-button.maximize {
      background: rgb(255,214,10);
@@ -371,10 +371,7 @@
      background-color: #606068;
 }
  .second_page {
-     background: linear-gradient(to right, #3c3d41, #666b7a);
-}
- .third_page {
-     background: linear-gradient(to right, #3f4044, #7a6677);
+    background: linear-gradient(to left, #454a4e, #2d3136)
 }
  .wrapperSecondPage {
      height: 100vh;
@@ -554,9 +551,10 @@
     }
 }
  .fifth_page{
-     background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);
-    /* Chrome 10-25, Safari 5.1-6 */
-     background: linear-gradient(to right, #928DAB, #1F1C2C);
+    background: #5C258D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #375058, #3a3241);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #375058, #3a3241); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
      display:flex;
      justify-content: center;
      align-items: center;
@@ -750,20 +748,21 @@
 }
  .nav ul li a:hover{
      text-decoration: none;
-     color: #664e6b;
+     color: #e65168;
      cursor:pointer;
 }
  .nav ul li a:after{
      display: block;
      position: absolute;
+     border-radius: 5px;
      top: 50%;
      content: '';
-     height: 1vh;
-     margin-top: 3.9vh;
+     height: .8vh;
+     margin-top: 4.5vh;
      width: 0;
      left: 0;
-     background-color: #5a4766;
-     opacity: 0.8;
+     background-color: #e65168;
+     opacity: 1;
      transition: width 250ms linear;
 }
  .nav ul li a:hover:after{
@@ -886,7 +885,7 @@
     margin: auto;  
     overflow-y: auto;  
     position: relative;  
-    z-index: 1;  
+    z-index: 2;  
     overflow-x: hidden;  
     background-color: rgba(255, 255, 255, 1);  
     display: flex;  
