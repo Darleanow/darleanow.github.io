@@ -9,13 +9,11 @@ const start = {
 };
 
 function touchStart(event) {
-	event.preventDefault();
 	start.x = event.touches[0].pageX;
 	start.y = event.touches[0].pageY;
 }
 
 function touchMove(event) {
-	event.preventDefault();
 	const offset = {};
 	offset.x = start.x - event.touches[0].pageX;
 	offset.y = start.y - event.touches[0].pageY;
@@ -25,7 +23,6 @@ function touchMove(event) {
 }
 
 function scrollHandler(e) {
-	if(e.preventDefault) e.preventDefault();
 	if (animationEnd) {
 		if (e.deltaY > 0) index++;
 		else index--;
