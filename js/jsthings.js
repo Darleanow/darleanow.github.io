@@ -1,5 +1,5 @@
 const scroll = document.querySelectorAll(".scroll");
-const maxIndex = 3; //NB DE PAGES
+const maxIndex = 4; //NB DE PAGES
 let index = 0;
 let animationEnd = true;
 let boolUp = 0;
