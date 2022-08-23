@@ -67,7 +67,7 @@ document.body.addEventListener("touchmove", touchMove, false);
 
 function scrollToBottom() {
 	actualindex = index;
-	index = scroll.length - 2;
+	index = scroll.length - 1;
 	scroll[0].style.marginTop = "-" + index * 100 + "vh";
 	animationEnd = false;
 	setTimeout(() => animationEnd = true, 450);
