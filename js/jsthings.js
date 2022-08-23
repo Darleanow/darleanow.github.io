@@ -59,6 +59,7 @@ function firstPageButton() {
 	animationEnd = false;
 	setTimeout(() => animationEnd = true, 450);
 }
+document.addEventListener("scroll", (e) => e.preventDefault())
 document.body.addEventListener("keydown", keyScroll);
 document.body.addEventListener("wheel", scrollHandler);
 document.body.addEventListener("touchstart", touchStart, false);
