@@ -61,7 +61,7 @@ function firstPageButton() {
 }
 document.addEventListener("scroll", (e) => e.preventDefault())
 document.body.addEventListener("keydown", keyScroll);
-document.body.addEventListener("wheel", scrollHandler);
+document.body.addEventListener("wheel", scrollHandler,event?.preventDefault());
 document.body.addEventListener("touchstart", touchStart, false);
 document.body.addEventListener("touchmove", touchMove, false);
 
