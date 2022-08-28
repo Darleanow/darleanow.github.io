@@ -28,7 +28,7 @@ body {
 }
 
 .first_page {
-   background: linear-gradient(to right, #46484d, #64746e);
+   background: linear-gradient(to right, #46484d, #55776b);
 }
 
 .welcome {
@@ -223,7 +223,7 @@ body {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .contact_form {
-   background: linear-gradient(to right, #232526, #414345);
+   background: linear-gradient(to right, #232526, #414d58);
    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    width: 100%;
@@ -446,7 +446,7 @@ body {
 }
 
 .second_page {
-   background: linear-gradient(to left, #454a4e, #2d3136)
+   background: linear-gradient(to left, #4f6b58, #272a2c)
 }
 
 .wrapperSecondPage {

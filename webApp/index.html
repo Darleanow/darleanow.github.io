@@ -1,257 +1,289 @@
 <!--
-	POUR EDITER LE CONTENU => Ligne 54
-	-->
-    <!DOCTYPE html>
-    <html lang="fr">
-        <head>
-            <title>Web App by Darleanow</title>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="../css/webApp.css">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-        </head>
-        <body id="body">
-            <!--NAV TOUTE A GAUCHE-->
-            <div id="first_menu" class="wrapper_left_menu">
-                <div class="wrapper_topleft_menu">
-                    <!--REDUIT LE DEUXIEME WRAPPER-->
-                    <span id="view_menu" class="material-symbols-outlined left_menu_link on" style="padding-left: 4px;padding-top: 40px;position: absolute;">arrow_forward_ios
-                    <span class="infoHover">Fermer le menu</span>
-                    </span>
-                    <span id="hide_menu" class="material-symbols-outlined left_menu_link open_menu off" style="padding-left: 4px;padding-top: 40px;position: absolute;">arrow_back_ios
-                    <span class="infoHover">Ouvrir le menu</span>
-                    </span>
-                    <span id="algoBut" class="material-symbols-outlined left_menu_link" style="padding-left: 2px;margin-top: 100px;">functions
-                    <span class="infoHover">Algorithmie</span>
-                    </span>
-                    <span id="devBut" class="material-symbols-outlined left_menu_link" style="padding-left: 2px;margin-top: 18px;">code
-                    <span class="infoHover">Développement</span>
-                    </span>
-                    <span id="netBut" class="material-symbols-outlined left_menu_link" style="padding-left: 2px;margin-top: 18px;">network_check
-                    <span class="infoHover">Réseau</span>
-                    </span>
-                    <span class="material-symbols-outlined left_menu_link topleft_menu_bottom" onclick="showPopup()">settings
-                    <span class="infoHover">Paramètres</span>
-                    </span><!--TOUT EN BAS--><!--AJOUTER LIEN ICONS-->
-                    <span id="menu_param" class="params_Menu">
-                        <div class="param_container">
-                            <div class="full-screen hidden flex-container-center">
-                                <a class="close"onclick="closePopup()"></a>
-                                <div class="wrapper">
-                                    <input type="checkbox" id="hide-checkbox" onclick="changeTheme()">
-                                    <label for="hide-checkbox" class="toggle">
-                                    <span class="toggle-button">
-                                    <span class="crater crater-1"></span>
-                                    <span class="crater crater-2"></span>
-                                    <span class="crater crater-3"></span>   
-                                    <span class="crater crater-4"></span>
-                                    <span class="crater crater-5"></span>
-                                    <span class="crater crater-6"></span>
-                                    <span class="crater crater-7"></span>
-                                    </span>
-                                    <span class="star star-1"></span>
-                                    <span class="star star-2"></span>
-                                    <span class="star star-3"></span>
-                                    <span class="star star-4"></span>
-                                    <span class="star star-5"></span>
-                                    <span class="star star-6"></span>
-                                    <span class="star star-7"></span>
-                                    <span class="star star-8"></span>
-                                    </label>
-                                </div>
+   POUR EDITER LE CONTENU => Ligne 54
+   -->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Web App by Darleanow</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/webApp.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body id="body">
+        <!--NAV TOUTE A GAUCHE-->
+        <div id="first_menu" class="wrapper_left_menu">
+        <div class="wrapper_topleft_menu">
+            <!--REDUIT LE DEUXIEME WRAPPER-->
+            <span id="view_menu" class="material-symbols-outlined left_menu_link on" style="padding-left: 4px;padding-top: 40px;position: absolute;">arrow_forward_ios
+            <span class="infoHover">Fermer le menu</span>
+            </span>
+            <span id="hide_menu" class="material-symbols-outlined left_menu_link open_menu off" style="padding-left: 4px;padding-top: 40px;position: absolute;">arrow_back_ios
+            <span class="infoHover">Ouvrir le menu</span>
+            </span>
+            <span id="algoBut" class="material-symbols-outlined left_menu_link" style="padding-left: 2px;margin-top: 100px;">functions
+            <span class="infoHover">Algorithmie</span>
+            </span>
+            <span id="devBut" class="material-symbols-outlined left_menu_link" style="padding-left: 2px;margin-top: 18px;">code
+            <span class="infoHover">Développement</span>
+            </span>
+            <span id="netBut" class="material-symbols-outlined left_menu_link" style="padding-left: 2px;margin-top: 18px;">network_check
+            <span class="infoHover">Réseau</span>
+            </span>
+            <span class="material-symbols-outlined left_menu_link topleft_menu_bottom" onclick="showPopup()">settings
+            <span class="infoHover">Paramètres</span>
+            </span><!--TOUT EN BAS--><!--AJOUTER LIEN ICONS-->
+            <span id="menu_param" class="params_Menu">
+                <div class="param_container">
+                    <div class="full-screen hidden flex-container-center">
+                    <a class="close"onclick="closePopup()"></a>
+                    <div class="nav_Pannel">
+                        <div class="container_text_params_options">
+                            <div class="spacing_from_top">
+                            </div>
+                            <div id="apparence_button" class="tab_active_param button_param_position_1 icon_edit">
+                                <i class="icon_edit fa-solid fa-palette"></i>&nbsp;&nbsp;Apparence
+                            </div>
+                            <div class="spacing_middle_options">
+                            </div>
+                            <div id="feedback_button" class="button_param_position_2 icon_edit">
+                                <i class="icon_edit fa-solid fa-thumbs-up"></i>&nbsp;&nbsp;Feedback
                             </div>
                         </div>
-                    </span>
-                </div>
-            </div>
-            <div id="second_menu"class="wrapper_second_left_menu">
-                <div class="wrapper_second_fileExplorer">
-                    <div id="algo" class="title_second_wrapper active">
-                        <span class="material-symbols-outlined wrapper_second_left_menu_icon second_left_menu_link">token</span>
-                        <p id="algoICON" class="wrapper_second_left_menu_title">Algorithmie</p>
-                        <div id="algoCONTENT" class="wrapper_tree_view">
-                            <ul class="elems" id="elems">
-                                <div id="first_parent" class="toggler firstParent">Méthodes</div>
-                                <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
-                                    <li id="stackBut" class="childElem">Stack</li>
-                                    <li id="queueBut" class="childElem">Files</li>
-                                    <li id="dequeBut" class="childElem">Deque</li>
-                                    <li id="linkBut" class="childElem">Linked list</li>
-                                    <li id="hashBut" class="childElem">Hash table</li>
-                                    <li id="heapBut" class="childElem">Heap</li>
-                                    <div id="first_parent" class="toggler firstParent">Arbres</div>
-                                    <ul id="first_child" class="toggler-target" style="margin-left: 30px;">
-                                        <li class="childElem">Arbre binaire</li>
-                                        <li class="childElem">Arbre Avl</li>
-                                        <li class="childElem">Arbre B-</li>
-                                        <li class="childElem">Arbre B+</li>
-                                        <li class="childElem">Arbre R-B</li>
-                                    </ul>
-                                </ul>
-                                <div id="first_parent" class="toggler firstParent">Algorithmes de recherche</div>
-                                <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
-                                    <li class="childElem">Recherche linéaire</li>
-                                    <li class="childElem">Recherche binaire</li>
-                                </ul>
-                                <div id="first_parent" class="toggler firstParent">Algorithmes de tri</div>
-                                <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
-                                    <li class="childElem">Bubble sort</li>
-                                    <li class="childElem">Selection sort</li>
-                                    <li class="childElem">Insertion sort</li>
-                                    <li class="childElem">Merge sort</li>
-                                    <li class="childElem">Quick sort</li>
-                                    <li class="childElem">Counting sort</li>
-                                    <li class="childElem">Radix sort</li>
-                                    <li class="childElem">Bucket sort</li>
-                                    <li class="childElem">Heap sort</li>
-                                    <li class="childElem">Shell sort</li>
-                                </ul>
-                                <div id="first_parent" class="toggler firstParent">Algorithmes aggressifs</div>
-                                <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
-                                    <li class="childElem">Greedy Algorithm</li>
-                                    <li class="childElem">Dijkstra's Algorithm</li>
-                                    <li class="childElem">Kruskal's Algorithm</li>
-                                    <li class="childElem">Prim's Algorithm</li>
-                                    <li class="childElem">Huffman Code</li>
-                                </ul>
-                            </ul>
-                        </div>
                     </div>
-                    <div id="dev" class="title_second_wrapper inactive">
-                        <span class="material-symbols-outlined wrapper_second_left_menu_icon second_left_menu_link">token</span>
-                        <p id="devICON" class="wrapper_second_left_menu_title">Développement</p>
-                        <div id="devCONTENT" class="wrapper_tree_view">
-                            <ul class="elems" id="elems">
-                                <div id="first_parent" class="toggler firstParent">Projets</div>
-                                <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
-                                    <li class="childElem">A venir !</li>
-                                </ul>
-                            </ul>
+                    <div id="apparence_text" class="active_content_text content_apparence_menu">
+                        <div class="title_setting">
+                            Apparence
                         </div>
-                        <div id="net" class="title_second_wrapper inactive">
-                            <span class="material-symbols-outlined wrapper_second_left_menu_icon second_left_menu_link">token</span>
-                            <p id="netICON" class="wrapper_second_left_menu_title">Réseau</p>
-                            <div id="netCONTENT" class="wrapper_tree_view">
-                                <ul class="elems" id="elems">
+                        <div class="subtitle_setting">
+                            Choix de la couleur d'accent &nbsp;<i class="hover_help_couleur_accent fa-solid fa-circle-question"></i>
+                            <div class="info_accent_color">Nuances de couleurs sur la page.
                             </div>
-                            <!--
-                                folder_open POUR FOLDER 
-                                description POUR FICHIER
-                                -->
                         </div>
-                        <!--
-                            MENU DEROULANT   : <div class="toggler">Task 3</div>
-                            contenu : <ul class="toggler-target" style="margin-left:10px;"> =>augmenter margin a chaque fois
-                            element : <li class="todo">Task 1</li>
-                            -->    
+                        <div id="circles_all" class="circles_position">
+                            <div id="fstcrcl"class="circle belizehole"></div>
+                            <div id="scdcrcl"class="circle greensea"></div>
+                            <div id="trdcrcl"class="circle nephritis"></div>
+                            <div id="frtcrcl"class="circle orange"></div>
+                            <div id="fftcrcl"class="circle pomegranate"></div>
+                            <div id="sxtcrcl"class="circle chestnutrose"></div>
+                            <div id="sptcrcl"class="circle deepblush"></div>
+                            <div id="hgtcrcl"class="circle wisteria current_color"><i class="fas fa-check active_color_accent"></i></div>
+                        </div>
+                        <div class="subtitle_setting_theme">
+                            Choix du thème &nbsp;<i class="hover_help_theme_accent fa-solid fa-circle-question"></i>
+                            <div class="info_accent_theme">Couleur du fond.
+                            </div>
+                        </div>
+                        <div class="container_themes">
+                            <div id="default" class="theme default_theme">
+                                <div id="active_theme_1" class="position_arrow active_theme"><img class="image_theme" src="../documents/Pictures/Default_Colors_Theme.png"><i id="first_theme" class="fas fa-check arrow_icon_theme_1 delete_helper"></i></div>
+                            </div>
+                            <div id="darker" class="theme darker_theme">
+                                <div id="active_theme_2" class="position_arrow"><img class="image_theme" src="../documents/Pictures/Darker_Colors_Theme.png"></div>
+                            </div>
+                            <div id="light" class="theme light_theme">
+                                <div id="active_theme_3" class="position_arrow"><img class="image_theme" src="../documents/Pictures/Light_Colors_Theme.png"></div>
+                            </div>
+                        </div>
                     </div>
+                    <div id="feedback_text" class="unactive_content_text content_feedback_menu">
+                        Merci de me laisser un message :))
+                    </div>
+                    </div>
+                </div>
+            </span>
+        </div>
+        </div>
+        <div id="second_menu"class="wrapper_second_left_menu">
+        <div class="wrapper_second_fileExplorer">
+            <div id="algo" class="title_second_wrapper active">
+                <span class="material-symbols-outlined wrapper_second_left_menu_icon second_left_menu_link">token</span>
+                <p id="algoICON" class="wrapper_second_left_menu_title">Algorithmie</p>
+                <div id="algoCONTENT" class="wrapper_tree_view">
+                    <ul class="elems" id="elems">
+                    <div id="first_parent" class="toggler firstParent">Méthodes</div>
+                    <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
+                        <li id="stackBut" class="childElem">Stack</li>
+                        <li id="queueBut" class="childElem">Files</li>
+                        <li id="dequeBut" class="childElem">Deque</li>
+                        <li id="linkBut" class="childElem">Linked list</li>
+                        <li id="hashBut" class="childElem">Hash table</li>
+                        <li id="heapBut" class="childElem">Heap</li>
+                        <div id="first_parent" class="toggler firstParent">Arbres</div>
+                        <ul id="first_child" class="toggler-target" style="margin-left: 30px;">
+                            <li class="childElem">Arbre binaire</li>
+                            <li class="childElem">Arbre Avl</li>
+                            <li class="childElem">Arbre B-</li>
+                            <li class="childElem">Arbre B+</li>
+                            <li class="childElem">Arbre R-B</li>
+                        </ul>
+                    </ul>
+                    <div id="first_parent" class="toggler firstParent">Algorithmes de recherche</div>
+                    <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
+                        <li class="childElem">Recherche linéaire</li>
+                        <li class="childElem">Recherche binaire</li>
+                    </ul>
+                    <div id="first_parent" class="toggler firstParent">Algorithmes de tri</div>
+                    <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
+                        <li class="childElem">Bubble sort</li>
+                        <li class="childElem">Selection sort</li>
+                        <li class="childElem">Insertion sort</li>
+                        <li class="childElem">Merge sort</li>
+                        <li class="childElem">Quick sort</li>
+                        <li class="childElem">Counting sort</li>
+                        <li class="childElem">Radix sort</li>
+                        <li class="childElem">Bucket sort</li>
+                        <li class="childElem">Heap sort</li>
+                        <li class="childElem">Shell sort</li>
+                    </ul>
+                    <div id="first_parent" class="toggler firstParent">Algorithmes aggressifs</div>
+                    <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
+                        <li class="childElem">Greedy Algorithm</li>
+                        <li class="childElem">Dijkstra's Algorithm</li>
+                        <li class="childElem">Kruskal's Algorithm</li>
+                        <li class="childElem">Prim's Algorithm</li>
+                        <li class="childElem">Huffman Code</li>
+                    </ul>
+                    </ul>
                 </div>
             </div>
-            <div id="main_content" class="main_content_wrapper">
-                <div id="stack" class="main_content off">
-                    <div class="line_holder">
-                        <p class="main_content_title">\ Stack </p>
-                    </div>
-                    <div class="wrapper_article_content">
-                        <p class="paragraph_content_text">
-                            La stack (ou pile) est une méthode en Algorithmie, elle est beaucoup utilisée notamment dans le web, que nous verrons plus tard.<br>
-                            Concretement une stack est un empilement, les méthodes qui lui sont associées permettent d'y ajouter un élément, et de retirer le dernier élément ajouté.<br>
-                            Cela fonctionne un peu comme une pile d'assiettes, vous pouvez en rajouter une, et enlever la dernière.<br>
-                            La maniere la plus simple d'implémenter une stack est d'utiliser une méthode d'array.<br>
-                            La stack possede une complexité de O(1).<br>
-                            A savoir que la librairie standard possède une méthode de stack.
-                            <br><br><br>
-                            Applications :<br><br>
-                            - Web: <br>
-                            &emsp;Les bouttons en haut a gauche de votre navigateur permettant d'aller aux onglets précédents fonctionnent comme une stack.<br>
-                            &emsp;Votre navigateur va enregistrer tout vos onglets, lorsque vous cliquez sur le boutton retour, ce dernier vous affichera l'élément le plus en haut de la stack.
-                            <br>- Algorithmes: <br>
-                            &emsp;Permet par exemple d'inverser une string donnée.
-                            <br><br><br>
-                            Logique d'une stack :
-                            <br><br>
-                            &emsp;1. Création d'un pointer "TOP" pour garder la trace de l'élément le plus en haut.<br>
-                            &emsp;2. Lorsque l'on initialise la Stack,on lui donne pour valeur "-1" afin de vérifier que cette dernière est vide.<br>
-                            &emsp;3. Lorsque l'on ajoute un élément, on incrémente la valeur du pointeur "TOP" et placer le nouvel élément a la position pointée par "TOP".<br>
-                            &emsp;4. Quand on enlève un élément, on retourne la valeur pointée par "TOP" et réduisons la valeur de "TOP" de 1.<br>
-                            &emsp;5. Avant de push un élément, on vérifie que la Stack n'est pas pleine.<br>
-                            &emsp;6. Avant de pop un élément, on vérifie que la Stack n'est pas vide.<br>
-                            &emsp;Les bouttons en haut a gauche de votre navigateur permettant d'aller aux onglets précédents fonctionnent comme une stack.<br>
-                            &emsp;Votre navigateur va enregistrer tout vos onglets, lorsque vous cliquez sur le boutton retour, ce dernier vous affichera l'élément le plus en haut de la stack.
-                            <br><br>
-                            <a href="https://github.com/Darleanow/websiteProjects/blob/main/code_samples/Stack.cpp">Cliquez ici pour voir le code de l'exemple.</a>
-                            <br><br>
-                            Pour vérifier que vous avez bien compris, essayez de faire un programme retournant true ou false si le nombre de ( )/[ ]/{ } est correct et fait correctement.<br>
-                            L'exercice est réussi si les cas de test suivant correspondent a ceux attendus.<br>
-                            "(()[]]{)" = false <br>
-                            "(()[])" &nbsp;&nbsp;&nbsp;= true <br>
-                            "((()][))" = false <br>
-                            "({{}[]})" = true <br>
-                        </p>
-                    </div>
+            <div id="dev" class="title_second_wrapper inactive">
+                <span class="material-symbols-outlined wrapper_second_left_menu_icon second_left_menu_link">token</span>
+                <p id="devICON" class="wrapper_second_left_menu_title">Développement</p>
+                <div id="devCONTENT" class="wrapper_tree_view">
+                    <ul class="elems" id="elems">
+                    <div id="first_parent" class="toggler firstParent">Projets</div>
+                    <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
+                        <li class="childElem">A venir !</li>
+                    </ul>
+                    </ul>
                 </div>
-                <div id="queue" class="main_content off">
-                    <div class="line_holder">
-                        <p class="main_content_title">\ Files</p>
+                <div id="net" class="title_second_wrapper inactive">
+                    <span class="material-symbols-outlined wrapper_second_left_menu_icon second_left_menu_link">token</span>
+                    <p id="netICON" class="wrapper_second_left_menu_title">Réseau</p>
+                    <div id="netCONTENT" class="wrapper_tree_view">
+                    <ul class="elems" id="elems">
                     </div>
-                    <div class="wrapper_article_content">
-                        <p class="paragraph_content_text">
-                            Une file est une méthode d'algorithmie similaire aux queues que l'on peut retrouver dans les cinémas. <br>
-                            La personne tout devant aura son ticket avant la dernière personne. <br> <br>
-                            La structure file respecte la règle FIFO (First In First Out), en effet, le premier élément est aussi le premier à sortir. <br> <br>
-                            A savoir que la librairie Standard C++ propose une méthode de file.<br>
-                            La file possède une complexité de O(1).
-                            Il existe plusieurs méthodes associées a la file : <br>
-                            &emsp;-l'enfile  => Ajout d'items dans la file <br>
-                            &emsp;-la défile => Enlèvement d'items de la file <br>
-                            &emsp;-Peek      => Récuperer la valeur du devant de la file sans l'enlever (contrairement a la méthode "pop" qui elle l'enlève aussi).<br>
-                            <br> <br>
-                            Fonctionnement d'une file : <br>
-                            &emsp;- Deux pointeurs "FRONT" et "REAR" (front = devant ; rear = arrière) <br>
-                            &emsp;- Le pointeur "FRONT" traque le premier élément de la file <br>
-                            &emsp;- Le pointeur "REAR" traque le dernier élément de la file <br>
-                            &emsp;- Lors de l'init, on met la valeur de "FRONT" et "REAR" a -1
-                            <br> <br> <br>
-                            Opérations sur la file: <br>
-                            &emsp;- Enfile: <br>
-                            &emsp;&emsp;- On vérifie si la file est pleine. <br>
-                            &emsp;&emsp;- Pour le premier élément, on met la valeur du pointeur "FRONT" a 0. <br>
-                            &emsp;&emsp;- On augmente l'indexe du pointeur "REAR" de 1. <br>
-                            &emsp;&emsp;- Ajout de l'élément sur la position pointée par "REAR". <br> <br>
-                            &emsp;- Défile : <br>
-                            &emsp;&emsp;- On vérifie si la file est pleine. <br> 
-                            &emsp;&emsp;- On retourne la valeur pointée par "FRONT". <br> 
-                            &emsp;&emsp;- On augmente l'indexe du pointeur "FRONT" par 1. <br>
-                            &emsp;&emsp;- Pour le dernier élément, on réinitialise les valeurs de "FRONT" et "REAR" a -1. <br> <br>
-                            <a href="https://github.com/Darleanow/websiteProjects/blob/main/code_samples/Queue.cpp">Cliquez ici pour voir le code de l'exemple.</a>
-                        </p>
-                    </div>
+                    <!--
+                    folder_open POUR FOLDER 
+                    description POUR FICHIER
+                    -->
                 </div>
-                <div id="deque" class="main_content off">
-                    <div class="line_holder">
-                        <p class="main_content_title">\ Deque</p>
-                    </div>
-                    <div class="wrapper_article_content">
-                        <p class="paragraph_content_text">
-                        </p>
-                    </div>
-                </div>
+                <!--
+                    MENU DEROULANT   : <div class="toggler">Task 3</div>
+                    contenu : <ul class="toggler-target" style="margin-left:10px;"> =>augmenter margin a chaque fois
+                    element : <li class="todo">Task 1</li>
+                    -->    
             </div>
-            <!--
-                <div class="wrapper_main">
-                    <div class="wrapper_main_navbar">
-                        <li>FILE ICON en fonction de l'onglet</li>
-                        <title>NOM FICHIER</title>
-                    </div>
-                    <div class="wrapper_content_main">
-                        <li>Contenu du fichier :)</li>
-                    </div>
-                </div>
-                -->
-            <script src="../js/webApp.js"></script>
-        </body>
-    </html>
+        </div>
+        </div>
+        <div id="main_content" class="main_content_wrapper">
+        <div id="stack" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Stack </p>
+            </div>
+            <div class="wrapper_article_content">
+                <p class="paragraph_content_text">
+                    La stack (ou pile) est une méthode en Algorithmie, elle est beaucoup utilisée notamment dans le web, que nous verrons plus tard.<br>
+                    Concretement une stack est un empilement, les méthodes qui lui sont associées permettent d'y ajouter un élément, et de retirer le dernier élément ajouté.<br>
+                    Cela fonctionne un peu comme une pile d'assiettes, vous pouvez en rajouter une, et enlever la dernière.<br>
+                    La maniere la plus simple d'implémenter une stack est d'utiliser une méthode d'array.<br>
+                    La stack possede une complexité de O(1).<br>
+                    A savoir que la librairie standard possède une méthode de stack.
+                    <br><br><br>
+                    Applications :<br><br>
+                    - Web: <br>
+                    &emsp;Les bouttons en haut a gauche de votre navigateur permettant d'aller aux onglets précédents fonctionnent comme une stack.<br>
+                    &emsp;Votre navigateur va enregistrer tout vos onglets, lorsque vous cliquez sur le boutton retour, ce dernier vous affichera l'élément le plus en haut de la stack.
+                    <br>- Algorithmes: <br>
+                    &emsp;Permet par exemple d'inverser une string donnée.
+                    <br><br><br>
+                    Logique d'une stack :
+                    <br><br>
+                    &emsp;1. Création d'un pointer "TOP" pour garder la trace de l'élément le plus en haut.<br>
+                    &emsp;2. Lorsque l'on initialise la Stack,on lui donne pour valeur "-1" afin de vérifier que cette dernière est vide.<br>
+                    &emsp;3. Lorsque l'on ajoute un élément, on incrémente la valeur du pointeur "TOP" et placer le nouvel élément a la position pointée par "TOP".<br>
+                    &emsp;4. Quand on enlève un élément, on retourne la valeur pointée par "TOP" et réduisons la valeur de "TOP" de 1.<br>
+                    &emsp;5. Avant de push un élément, on vérifie que la Stack n'est pas pleine.<br>
+                    &emsp;6. Avant de pop un élément, on vérifie que la Stack n'est pas vide.<br>
+                    &emsp;Les bouttons en haut a gauche de votre navigateur permettant d'aller aux onglets précédents fonctionnent comme une stack.<br>
+                    &emsp;Votre navigateur va enregistrer tout vos onglets, lorsque vous cliquez sur le boutton retour, ce dernier vous affichera l'élément le plus en haut de la stack.
+                    <br><br>
+                    <a href="https://github.com/Darleanow/websiteProjects/blob/main/code_samples/Stack.cpp">Cliquez ici pour voir le code de l'exemple.</a>
+                    <br><br>
+                    Pour vérifier que vous avez bien compris, essayez de faire un programme retournant true ou false si le nombre de ( )/[ ]/{ } est correct et fait correctement.<br>
+                    L'exercice est réussi si les cas de test suivant correspondent a ceux attendus.<br>
+                    "(()[]]{)" = false <br>
+                    "(()[])" &nbsp;&nbsp;&nbsp;= true <br>
+                    "((()][))" = false <br>
+                    "({{}[]})" = true <br>
+                </p>
+            </div>
+        </div>
+        <div id="queue" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Files</p>
+            </div>
+            <div class="wrapper_article_content">
+                <p class="paragraph_content_text">
+                    Une file est une méthode d'algorithmie similaire aux queues que l'on peut retrouver dans les cinémas. <br>
+                    La personne tout devant aura son ticket avant la dernière personne. <br> <br>
+                    La structure file respecte la règle FIFO (First In First Out), en effet, le premier élément est aussi le premier à sortir. <br> <br>
+                    A savoir que la librairie Standard C++ propose une méthode de file.<br>
+                    La file possède une complexité de O(1).
+                    Il existe plusieurs méthodes associées a la file : <br>
+                    &emsp;-l'enfile  => Ajout d'items dans la file <br>
+                    &emsp;-la défile => Enlèvement d'items de la file <br>
+                    &emsp;-Peek      => Récuperer la valeur du devant de la file sans l'enlever (contrairement a la méthode "pop" qui elle l'enlève aussi).<br>
+                    <br> <br>
+                    Fonctionnement d'une file : <br>
+                    &emsp;- Deux pointeurs "FRONT" et "REAR" (front = devant ; rear = arrière) <br>
+                    &emsp;- Le pointeur "FRONT" traque le premier élément de la file <br>
+                    &emsp;- Le pointeur "REAR" traque le dernier élément de la file <br>
+                    &emsp;- Lors de l'init, on met la valeur de "FRONT" et "REAR" a -1
+                    <br> <br> <br>
+                    Opérations sur la file: <br>
+                    &emsp;- Enfile: <br>
+                    &emsp;&emsp;- On vérifie si la file est pleine. <br>
+                    &emsp;&emsp;- Pour le premier élément, on met la valeur du pointeur "FRONT" a 0. <br>
+                    &emsp;&emsp;- On augmente l'indexe du pointeur "REAR" de 1. <br>
+                    &emsp;&emsp;- Ajout de l'élément sur la position pointée par "REAR". <br> <br>
+                    &emsp;- Défile : <br>
+                    &emsp;&emsp;- On vérifie si la file est pleine. <br> 
+                    &emsp;&emsp;- On retourne la valeur pointée par "FRONT". <br> 
+                    &emsp;&emsp;- On augmente l'indexe du pointeur "FRONT" par 1. <br>
+                    &emsp;&emsp;- Pour le dernier élément, on réinitialise les valeurs de "FRONT" et "REAR" a -1. <br> <br>
+                    <a href="https://github.com/Darleanow/websiteProjects/blob/main/code_samples/Queue.cpp">Cliquez ici pour voir le code de l'exemple.</a>
+                </p>
+            </div>
+        </div>
+        <div id="deque" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Deque</p>
+            </div>
+            <div class="wrapper_article_content">
+                <p class="paragraph_content_text">
+                </p>
+            </div>
+        </div>
+        </div>
+        <!--
+        <div class="wrapper_main">
+            <div class="wrapper_main_navbar">
+                <li>FILE ICON en fonction de l'onglet</li>
+                <title>NOM FICHIER</title>
+            </div>
+            <div class="wrapper_content_main">
+                <li>Contenu du fichier :)</li>
+            </div>
+        </div>
+        -->
+        <script src="../js/webApp.js"></script>
+    </body>
+</html>
