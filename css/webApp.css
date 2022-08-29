@@ -83,7 +83,6 @@ body {
 }
 
 .left_menu_link:hover {
-
 	cursor: pointer;
 	color: var(--icon_color_hover);
 }
@@ -180,7 +179,7 @@ body {
 	padding-left: 25px;
 	color: var(--wrapper_second_left_menu_foldercolor);
 	font-family: var(--font_family);
-	font-weight: 549;
+	font-weight: 600;
 	font-size: 18px;
 }
 
@@ -411,9 +410,15 @@ ul {
 	margin-right: 20px;
 	padding-bottom: 2px;
 }
-
-.button_param_position_1:hover,
-.button_param_position_2:hover {
+.button_param_position_3 {
+	padding-top: 2px;
+	padding-left: 4px;
+	padding-right: 5px;
+	margin-left: 25px;
+	margin-right: 20px;
+	padding-bottom: 2px;
+}
+.button_param_position_1:hover,.button_param_position_2:hover,.button_param_position_3:hover {
 	border-radius: 6px;
 	background-color: var(--active_color_options_menu);
 	cursor: pointer;
@@ -649,4 +654,8 @@ COULEURS POUR THEMES
 	left: 91%;
 	bottom: 4%;
 	color: var(--active_color_options_menu) !important;
+}
+
+.content_feedback_menu{
+	font-size: 32px;
 }

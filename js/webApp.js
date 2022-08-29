@@ -8,6 +8,7 @@
 //  box.classList.remove("class1");
 //  box.classList.add("class2");
 //});
+let theme = "default";
 Array.prototype.remove = function() {
 	var what, a = arguments,
 		L = a.length,
@@ -200,6 +201,7 @@ open.onclick = function() {
 
 let apparence_button = document.getElementById("apparence_button")
 let feedback_button = document.getElementById("feedback_button")
+let soon_button = document.getElementById("soon_button")
 let apparence_text = document.getElementById("apparence_text")
 let feedback_text = document.getElementById("feedback_text")
 
@@ -208,21 +210,50 @@ apparence_button.addEventListener("click", function() {
 	apparence_button.classList.add("tab_active_param");
 	feedback_button.classList.remove("tab_active_param");
 	feedback_button.classList.add("tab_unactive_param");
+	soon_button.classList.remove("tab_active_param");
+	soon_button.classList.add("tab_unactive_param");
 	apparence_text.classList.remove("unactive_content_text");
 	apparence_text.classList.add("active_content_text");
 	feedback_text.classList.remove("active_content_text");
 	feedback_text.classList.add("unactive_content_text");
+	soon_text.classList.remove("active_content_text");
+	soon_text.classList.add("unactive_content_text");
+	
 })
+
 
 feedback_button.addEventListener("click", function() {
 	apparence_button.classList.add("tab_unactive_param");
 	apparence_button.classList.remove("tab_active_param");
 	feedback_button.classList.add("tab_active_param");
+	soon_button.classList.remove("tab_active_param");
+	soon_button.classList.add("tab_unactive_param");
 	feedback_button.classList.remove("tab_unactive_param");
 	apparence_text.classList.remove("active_content_text");
 	apparence_text.classList.add("unactive_content_text");
 	feedback_text.classList.remove("unactive_content_text");
 	feedback_text.classList.add("active_content_text");
+	soon_text.classList.remove("active_content_text");
+	soon_text.classList.add("unactive_content_text");
+	
+})
+
+soon_button.addEventListener("click",function(){
+	apparence_button.classList.add("tab_unactive_param");
+	apparence_button.classList.remove("tab_active_param");
+	feedback_button.classList.remove("tab_active_param");
+	soon_button.classList.add("tab_active_param");
+	soon_button.classList.remove("tab_unactive_param");
+	feedback_button.classList.add("tab_unactive_param");
+
+	feedback_text.classList.remove("active_content_text");
+	feedback_text.classList.add("unactive_content_text");
+	apparence_text.classList.remove("active_content_text");
+	apparence_text.classList.add("unactive_content_text");
+
+	soon_text.classList.remove("unactive_content_text");
+	soon_text.classList.add("active_content_text");
+	
 })
 
 let fstcrcl = document.getElementById("fstcrcl");
@@ -233,6 +264,7 @@ let fftcrcl = document.getElementById("fftcrcl");
 let sxtcrcl = document.getElementById("sxtcrcl");
 let sptcrcl = document.getElementById("sptcrcl");
 let hgtcrcl = document.getElementById("hgtcrcl");
+
 
 //Changer theme 
 function del_icon_and_current_state() {
@@ -352,11 +384,11 @@ hgtcrcl.addEventListener("click", function() {
 	node.className = "fas fa-check active_color_accent";
 	document.getElementById("hgtcrcl").appendChild(node);
 	document.documentElement.style.setProperty('--scroll_bar_color', 'rgb(85, 74, 139)');
-	document.documentElement.style.setProperty('--wrapper_second_left_menu_bordercolor', '#8e44ad');
+	document.documentElement.style.setProperty('--wrapper_second_left_menu_bordercolor', '#2f2847');
 	document.documentElement.style.setProperty('--main_content_border_color', 'rgb(85, 74, 139)');
 	document.documentElement.style.setProperty('--params_menu_shadow_borders', 'rgba(81, 36, 110, 0.54)');
 	document.documentElement.style.setProperty('--active_color_options_menu', 'rgba(112, 72, 177, 0.774)');
-	defaulT = '#8e44ad'
+	defaulT = '#2f2847'
 })
 
 var first_theme = document.getElementById("first_theme");
@@ -371,6 +403,7 @@ function del_active_theme() {
 }
 
 document.getElementById("default").onclick = function() {
+	
 	document.querySelectorAll('.delete_helper').forEach(e => e.remove());
 	const node = document.createElement("i");
 	node.className = "fas fa-check arrow_icon_theme_1 delete_helper";
@@ -399,6 +432,8 @@ document.getElementById("default").onclick = function() {
 	document.documentElement.style.setProperty("--close_button_color_params_menu", "rgb(129, 128, 128)");
 	document.documentElement.style.setProperty("--tooltip_help_back", "rgb(39, 39, 39)");
 	document.documentElement.style.setProperty("--color_tooltip_text", "rgb(255,255,255)");
+	theme="default";
+	rmvImage();
 }
 
 document.getElementById("darker").onclick = function() {
@@ -430,6 +465,8 @@ document.getElementById("darker").onclick = function() {
 	document.documentElement.style.setProperty("--close_button_color_params_menu", "rgb(97, 96, 96)");
 	document.documentElement.style.setProperty("--tooltip_help_back", "rgb(39, 39, 39)");
 	document.documentElement.style.setProperty("--color_tooltip_text", "rgb(255,255,255)");
+	theme="darker";
+	
 }
 document.getElementById("light").onclick = function() {
 	document.querySelectorAll('.delete_helper').forEach(e => e.remove());
@@ -460,6 +497,8 @@ document.getElementById("light").onclick = function() {
 	document.documentElement.style.setProperty("--close_button_color_params_menu", "rgb(119, 117, 117)");
 	document.documentElement.style.setProperty("--tooltip_help_back", "rgb(241, 241, 241)");
 	document.documentElement.style.setProperty("--color_tooltip_text", "rgb(0,0,0)");
+	theme="light";
+	
 }
 
 let stack = document.getElementById('stack');
