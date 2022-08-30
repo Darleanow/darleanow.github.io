@@ -65,9 +65,11 @@ hover du boutton parametres -> tooltip trop basse
 
 body {
 	background-color: var(--main_content_background) !important;
-	overflow-x: hidden;
 	width: 100%;
 	
+}
+body,html{
+	overflow-x: hidden;
 }
 .class_remove_onload{
 	overflow: hidden;
@@ -372,6 +374,7 @@ ul {
 }
 .wrapper_article_content{
 	display:flex;
+	width: 98%;
 	flex-direction: column;
 }
 .paragraph_content_text {
@@ -459,12 +462,12 @@ ul {
 
 .off {
 	position: absolute;
-	visibility: hidden;
+	display:none
 }
 
 .on {
 	position: absolute;
-	visibility: visible;
+	display:"";
 }
 .params_Menu{
 	z-index:100!important;
