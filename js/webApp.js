@@ -7,6 +7,9 @@ addEventListener('load', (event) => {
 		document.querySelectorAll('.loading_screen').forEach(e => e.remove())
 	}, 3000);
 	setTimeout(function(){
+		document.getElementById('animate_this').classList.add('animate');
+	},2400);
+	setTimeout(function(){
 		var element = document.getElementById("body");
   		element.classList.remove("class_remove_onload");
 	},3000);

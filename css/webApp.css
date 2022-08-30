@@ -114,6 +114,8 @@ p{
 	margin: 0;
 	padding: 0;
 	background-color: #1c1d1d;
+	perspective: 500;
+	-webkit-perspective: 500;
   }
   .loader-container {
 	position: absolute;
@@ -122,6 +124,35 @@ p{
 	margin-left: -125px;
 	margin-top: -100px;
   }
+  .animate{
+	-webkit-animation: slide-out-fwd-center 0.8s linear both;
+	        animation: slide-out-fwd-center 0.8s linear both;
+  }
+  @-webkit-keyframes slide-out-fwd-center {
+	0% {
+	  -webkit-transform: translateZ(1);
+			  transform: translateZ(1);
+	  opacity: 1;
+	}
+	100% {
+	  -webkit-transform: translateZ(600px);
+			  transform: translateZ(600px);
+	  opacity: 0;
+	}
+  }
+  @keyframes slide-out-fwd-center {
+	0% {
+	  -webkit-transform: translateZ(1);
+			  transform: translateZ(1);
+	  opacity: 1;
+	}
+	100% {
+	  -webkit-transform: translateZ(600px);
+			  transform: translateZ(600px);
+	  opacity: 0;
+	}
+  }
+  
   .reflection {
 	transform-origin: 50% 110%;
 	transform: scaleY(-1);
