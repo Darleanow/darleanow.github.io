@@ -1,5 +1,4 @@
 //FAIRE HEAPGOTO
-//Adapter heihgt en fonction de la div ARTICLE qu'on voit !
 const delay = ms => new Promise(res => setTimeout(res, ms));
 addEventListener('load', (event) => {
 	window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -72,7 +71,7 @@ var t=function(){return(arYw.GreenSockGlobals||arYw).DrawSVGPlugin};
   
 	  var jumpArcReflection = jumpArc.cloneNode();
   
-	  jumpArcReflection.setAttribute('class', 'reflection'); // setAttribute needs to be used for classing SVG in JS
+	  jumpArcReflection.setAttribute('class', 'reflection'); 
 	  loaderSVG.appendChild(jumpArcReflection);
   
 	  setFilter('url("#strokeGlow")', jumpArc);
@@ -83,50 +82,36 @@ var t=function(){return(arYw.GreenSockGlobals||arYw).DrawSVGPlugin};
 	  });
   
 	  function jump() {
-  
-		var jumpTL = new TimelineMax();
-  
+		var jumpTL = new TimelineMax()
 		jumpTL
-		  .set(
-			[jumpArc, jumpArcReflection], {
+		  .set([jumpArc, jumpArcReflection], {
 			  drawSVG: '0% 0%'
-			}
-		  )
-		  .set(
-			[circleL, circleR], {
-			  attr: {
-				rx: 0,
-				ry: 0
-			  }
-			}
-		  )
+			})
+		  .set([circleL, circleR], {
+			  attr: {rx: 0,ry: 0}
+			})
 		  .to(
 			[jumpArc, jumpArcReflection],
 			BASE_DURATION_MULTIPLIER * 0.4, {
 			  drawSVG: '0% 30%',
 			  ease: Linear.easeNone
-			}
-		  )
+			})
   
-		// scale up the ripple ovals (with x scaling a bit more since, you know, it's a horizontal oval :-) )
 		.to(
 		  circleL,
 		  BASE_DURATION_MULTIPLIER * 2, {
 			attr: {
-			  rx: '+=30',
-			  ry: '+=10'
+			  rx: '+=30',ry: '+=10'
 			},
 			opacity: 0, // ripple, then fade out
 			ease: Power1.easeOut
 		  },
-		  '-=0.1'
-		)
+		  '-=0.1')
   
 		.to(
 		  [jumpArc, jumpArcReflection],
 		  BASE_DURATION_MULTIPLIER * 1.0, {
-			drawSVG: '50% 80%',
-			ease: Linear.easeNone
+			drawSVG: '50% 80%',ease: Linear.easeNone
 		  },
 		  '-=1.9'
 		)
@@ -140,30 +125,22 @@ var t=function(){return(arYw.GreenSockGlobals||arYw).DrawSVGPlugin};
 		  '-=0.9'
 		)
   
-		// finish by animating the right circle ripple
 		.to(
 		  circleR,
 		  BASE_DURATION_MULTIPLIER * 2, {
 			attr: {
-			  rx: '+=30',
-			  ry: '+=10'
+			  rx: '+=30',ry: '+=10'
 			},
-			opacity: 0, // ripple, then fade out
+			opacity: 0, 
 			ease: Power1.easeOut
 		  },
 		  '-=0.5'
 		);
-  
 		jumpTL.timeScale(3);
-  
 		return jumpTL;
-  
 	  }
-  
 	  window.onload = function() {
-  
 		masterTL.add(jump());
-  
 	  };
 
 async function untoggle() {
@@ -674,37 +651,284 @@ let queue = document.getElementById('queue');
 let queueBut = document.getElementById('queueBut');
 let deque = document.getElementById('deque');
 let dequeBut = document.getElementById('dequeBut');
+let link = document.getElementById('link');
+let linkBut = document.getElementById('linkBut');
+let hash = document.getElementById('hash');
+let hashBut =document.getElementById('hashBut');
+let heap = document.getElementById('heap');
+let heapBut =document.getElementById('heapBut');
+let binTree = document.getElementById('binTree');
+let binTreeBut =document.getElementById('binTreeBut');
+let avlTree = document.getElementById('avlTree');
+let avlTreeBut =document.getElementById('avlTreeBut');
+let bminusTree = document.getElementById('bminusTree');
+let bminusTreeBut =document.getElementById('bminusTreeBut');
+let bplusTree = document.getElementById('bplusTree');
+let bplusTreeBut =document.getElementById('bplusTreeBut');
+let rminusBTree = document.getElementById('rminusBTree');
+let rminusBTreeBut =document.getElementById('rminusBTreeBut');
+let linSearch = document.getElementById('linSearch');
+let linSearchBut =document.getElementById('linSearchBut');
+let binSearch = document.getElementById('binSearch');
+let binSearchBut =document.getElementById('binSearchBut');
+let bubbleSort = document.getElementById('bubbleSort');
+let bubbleSortBut =document.getElementById('bubbleSortBut');
+let selectionSort = document.getElementById('selectionSort');
+let selectionSortBut =document.getElementById('selectionSortBut');
+let insertionSort = document.getElementById('insertionSort');
+let insertionSortBut =document.getElementById('insertionSortBut');
+let mergeSort = document.getElementById('mergeSort');
+let mergeSortBut =document.getElementById('mergeSortBut');
+let quickSort = document.getElementById('quickSort');
+let quickSortBut =document.getElementById('quickSortBut');
+let countingSort = document.getElementById('countingSort');
+let countingSortBut =document.getElementById('countingSortBut');
+let radixSort = document.getElementById('radixSort');
+let radixSortBut =document.getElementById('radixSortBut');
+let bucketSort = document.getElementById('bucketSort');
+let bucketSortBut =document.getElementById('bucketSortBut');
+let heapSort = document.getElementById('heapSort');
+let heapSortBut =document.getElementById('heapSortBut');
+let shellSort = document.getElementById('shellSort');
+let shellSortBut =document.getElementById('shellSortBut');
+let greedAlgo = document.getElementById('greedAlgo');
+let greedAlgoBut =document.getElementById('greedAlgoBut');
+let dijkstraAlgo = document.getElementById('dijkstraAlgo');
+let dijkstraAlgoBut =document.getElementById('dijkstraAlgoBut');
+let kruskalAlgo = document.getElementById('kruskalAlgo');
+let kruskalAlgoBut =document.getElementById('kruskalAlgoBut');
+let primAlgo = document.getElementById('primAlgo');
+let primAlgoBut =document.getElementById('primAlgoBut');
+let huffmanAlgo = document.getElementById('huffmanAlgo');
+let huffmanAlgoBut =document.getElementById('huffmanAlgoBut');
 
-stackBut.onclick = function() {
-	stack.classList.remove('off');
-	stack.classList.add('on');
+function off_All_Algo(){
+	stack.classList.remove('on');
+	stack.classList.add('off');
 	queue.classList.remove('on');
 	queue.classList.add('off');
 	deque.classList.remove('on');
 	deque.classList.add('off');
+	link.classList.remove('on');
+	link.classList.add('off');
+	hash.classList.remove('on');
+	hash.classList.add('off');
+	heap.classList.remove('on');
+	heap.classList.add('off');
+	binTree.classList.remove('on');
+	binTree.classList.add('off');
+	avlTree.classList.remove('on');
+	avlTree.classList.add('off');
+	bminusTree.classList.remove('on');
+	bminusTree.classList.add('off');
+	bplusTree.classList.remove('on');
+	bplusTree.classList.add('off');
+	rminusBTree.classList.remove('on');
+	rminusBTree.classList.add('off');
+	linSearch.classList.remove('on');
+	linSearch.classList.add('off');
+	binSearch.classList.remove('on');
+	binSearch.classList.add('off');
+	bubbleSort.classList.remove('on');
+	bubbleSort.classList.add('off');
+	selectionSort.classList.remove('on');
+	selectionSort.classList.add('off');
+	insertionSort.classList.remove('on');
+	insertionSort.classList.add('off');
+	mergeSort.classList.remove('on');
+	mergeSort.classList.add('off');
+	quickSort.classList.remove('on');
+	quickSort.classList.add('off');
+	countingSort.classList.remove('on');
+	countingSort.classList.add('off');
+	radixSort.classList.remove('on');
+	radixSort.classList.add('off');
+	bucketSort.classList.remove('on');
+	bucketSort.classList.add('off');
+	heapSort.classList.remove('on');
+	heapSort.classList.add('off');
+	shellSort.classList.remove('on');
+	shellSort.classList.add('off');
+	greedAlgo.classList.remove('on');
+	greedAlgo.classList.add('off');
+	dijkstraAlgo.classList.remove('on');
+	dijkstraAlgo.classList.add('off');
+	kruskalAlgo.classList.remove('on');
+	kruskalAlgo.classList.add('off');
+	primAlgo.classList.remove('on');
+	primAlgo.classList.add('off');
+	huffmanAlgo.classList.remove('on');
+	huffmanAlgo.classList.add('off');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+stackBut.onclick = function() {
+	off_All_Algo();
+	stack.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 queueBut.onclick = function() {
-	stack.classList.remove('on');
-	stack.classList.add('off');
-	queue.classList.remove('off');
+	off_All_Algo();
 	queue.classList.add('on');
-	deque.classList.remove('on');
-	deque.classList.add('off');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 dequeBut.onclick = function() {
-	stack.classList.remove('on');
-	stack.classList.add('off');
-	queue.classList.remove('on');
-	queue.classList.add('off');
-	deque.classList.remove('off');
+	off_All_Algo();
 	deque.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
+linkBut.onclick = function() {
+	off_All_Algo();
+	link.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+hashBut.onclick = function() {
+	off_All_Algo();
+	hash.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+heapBut.onclick = function() {
+	off_All_Algo();
+	heap.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+binTreeBut.onclick = function() {
+	off_All_Algo();
+	binTree.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+avlTreeBut.onclick = function() {
+	off_All_Algo();
+	avlTree.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+bminusTreeBut.onclick = function() {
+	off_All_Algo();
+	bminusTree.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+bplusTreeBut.onclick = function() {
+	off_All_Algo();
+	bplusTree.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+rminusBTreeBut.onclick = function() {
+	off_All_Algo();
+	rminusBTree.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+linSearchBut.onclick = function() {
+	off_All_Algo();
+	linSearch.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+binSearchBut.onclick = function() {
+	off_All_Algo();
+	binSearch.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+bubbleSortBut.onclick = function() {
+	off_All_Algo();
+	bubbleSort.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+selectionSortBut.onclick = function() {
+	off_All_Algo();
+	selectionSort.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+insertionSortBut.onclick = function() {
+	off_All_Algo();
+	insertionSort.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+mergeSortBut.onclick = function() {
+	off_All_Algo();
+	mergeSort.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+quickSortBut.onclick = function() {
+	off_All_Algo();
+	quickSort.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+countingSortBut.onclick = function() {
+	off_All_Algo();
+	countingSort.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+radixSortBut.onclick = function() {
+	off_All_Algo();
+	radixSort.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+bucketSortBut.onclick = function() {
+	off_All_Algo();
+	bucketSort.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+heapSortBut.onclick = function() {
+	off_All_Algo();
+	heapSort.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+shellSortBut.onclick = function() {
+	off_All_Algo();
+	shellSort.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+greedAlgoBut.onclick = function() {
+	off_All_Algo();
+	greedAlgo.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+dijkstraAlgoBut.onclick = function() {
+	off_All_Algo();
+	dijkstraAlgo.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+kruskalAlgoBut.onclick = function() {
+	off_All_Algo();
+	kruskalAlgo.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+primAlgoBut.onclick = function() {
+	off_All_Algo();
+	primAlgo.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+huffmanAlgoBut.onclick = function() {
+	off_All_Algo();
+	huffmanAlgo.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
 heap_goto.onclick = function(){
 
