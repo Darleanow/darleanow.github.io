@@ -1,13 +1,10 @@
-//ONCLICK SUR EXPAND : 
-//Aggrandir la div
-//REMPLACER CLASSE
-//var btn = document.getElementById("btn");
-//var box = document.getElementById("box");
+//FAIRE HEAPGOTO
+//Adapter heihgt en fonction de la div ARTICLE qu'on voit !
+addEventListener('load', (event) => {
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
-//btn.addEventListener("click", function() {
-//  box.classList.remove("class1");
-//  box.classList.add("class2");
-//});
+
 let theme = "default";
 Array.prototype.remove = function() {
 	var what, a = arguments,
@@ -157,13 +154,17 @@ function showMenu() {
 }
 
 const popup = document.querySelector('.full-screen');
-
+const screen_hide = document.querySelector('.screen_hide')
 function showPopup() {
 	popup.classList.remove('hidden');
+	screen_hide.classList.remove('screen_hide_inactive');
+	screen_hide.classList.add('screen_hide_active');
 }
 
 function closePopup() {
 	popup.classList.add('hidden');
+	screen_hide.classList.add('screen_hide_inactive');
+	screen_hide.classList.remove('screen_hide_active');
 }
 
 //EXAMPLE
@@ -290,6 +291,8 @@ fstcrcl.addEventListener("click", function() {
 	document.documentElement.style.setProperty('--main_content_border_color', 'rgb(60, 118, 156)');
 	document.documentElement.style.setProperty('--params_menu_shadow_borders', 'rgb(28, 89, 129)');
 	document.documentElement.style.setProperty('--active_color_options_menu', 'rgb(66, 133, 179)');
+	document.documentElement.style.setProperty('--big_h', '#60a3bc');
+	document.documentElement.style.setProperty('--h_col', '#82ccdd');
 	defaulT = '#2980b9'
 })
 
@@ -304,6 +307,8 @@ scdcrcl.addEventListener("click", function() {
 	document.documentElement.style.setProperty('--main_content_border_color', 'rgb(22, 160, 133)');
 	document.documentElement.style.setProperty('--params_menu_shadow_borders', 'rgb(46, 116, 102)');
 	document.documentElement.style.setProperty('--active_color_options_menu', 'rgb(25, 139, 117)');
+	document.documentElement.style.setProperty('--big_h', '#079992');
+	document.documentElement.style.setProperty('--h_col', '#38ada9');
 	defaulT = '#16a085'
 })
 
@@ -318,6 +323,8 @@ trdcrcl.addEventListener("click", function() {
 	document.documentElement.style.setProperty('--main_content_border_color', 'rgb(45, 148, 88)');
 	document.documentElement.style.setProperty('--params_menu_shadow_borders', 'rgb(30, 90, 55)');
 	document.documentElement.style.setProperty('--active_color_options_menu', 'rgb(59, 131, 89)');
+	document.documentElement.style.setProperty('--big_h', '#10ac84');
+	document.documentElement.style.setProperty('--h_col', '#1dd1a1');
 	defaulT = '#27ae60'
 })
 
@@ -332,6 +339,8 @@ frtcrcl.addEventListener("click", function() {
 	document.documentElement.style.setProperty('--main_content_border_color', 'rgb(207, 143, 40)');
 	document.documentElement.style.setProperty('--params_menu_shadow_borders', 'rgb(180, 119, 20)');
 	document.documentElement.style.setProperty('--active_color_options_menu', 'rgb(209, 154, 65)');
+	document.documentElement.style.setProperty('--big_h', '#fed330');
+	document.documentElement.style.setProperty('--h_col', '#fdcb6e');
 	defaulT = '#f39c12'
 })
 
@@ -346,6 +355,8 @@ fftcrcl.addEventListener("click", function() {
 	document.documentElement.style.setProperty('--main_content_border_color', 'rgb(190, 69, 55)');
 	document.documentElement.style.setProperty('--params_menu_shadow_borders', 'rgb(161, 52, 40)');
 	document.documentElement.style.setProperty('--active_color_options_menu', 'rgb(180, 76, 64)');
+	document.documentElement.style.setProperty('--big_h', '#eb3b5a');
+	document.documentElement.style.setProperty('--h_col', '#fc5c65');
 	defaulT = '#c0392b'
 })
 
@@ -360,6 +371,8 @@ sxtcrcl.addEventListener("click", function() {
 	document.documentElement.style.setProperty('--main_content_border_color', 'rgb(172, 51, 61)');
 	document.documentElement.style.setProperty('--params_menu_shadow_borders', 'rgb(121, 34, 41)');
 	document.documentElement.style.setProperty('--active_color_options_menu', 'rgb(116, 44, 50)');
+	document.documentElement.style.setProperty('--big_h', '#df5f5f');
+	document.documentElement.style.setProperty('--h_col', '#ff7675');
 	defaulT = '#d24d57'
 })
 
@@ -374,6 +387,8 @@ sptcrcl.addEventListener("click", function() {
 	document.documentElement.style.setProperty('--main_content_border_color', 'rgb(201, 85, 112)');
 	document.documentElement.style.setProperty('--params_menu_shadow_borders', 'rgb(126, 54, 70)');
 	document.documentElement.style.setProperty('--active_color_options_menu', 'rgb(168, 75, 97)');
+	document.documentElement.style.setProperty('--big_h', '#e84393');
+	document.documentElement.style.setProperty('--h_col', '#fd79a8');
 	defaulT = '#e76d89'
 })
 
@@ -387,7 +402,9 @@ hgtcrcl.addEventListener("click", function() {
 	document.documentElement.style.setProperty('--wrapper_second_left_menu_bordercolor', '#2f2847');
 	document.documentElement.style.setProperty('--main_content_border_color', 'rgb(85, 74, 139)');
 	document.documentElement.style.setProperty('--params_menu_shadow_borders', 'rgba(81, 36, 110, 0.54)');
-	document.documentElement.style.setProperty('--active_color_options_menu', 'rgba(112, 72, 177, 0.774)');
+	document.documentElement.style.setProperty('--active_color_options_menu', 'rgba(112, 72, 177, 0.774)'); 
+	document.documentElement.style.setProperty('--big_h', '#6c5ce7');
+	document.documentElement.style.setProperty('--h_col', '#a29bfe');
 	defaulT = '#2f2847'
 })
 
@@ -433,7 +450,7 @@ document.getElementById("default").onclick = function() {
 	document.documentElement.style.setProperty("--tooltip_help_back", "rgb(39, 39, 39)");
 	document.documentElement.style.setProperty("--color_tooltip_text", "rgb(255,255,255)");
 	theme="default";
-	rmvImage();
+	
 }
 
 document.getElementById("darker").onclick = function() {
@@ -501,6 +518,9 @@ document.getElementById("light").onclick = function() {
 	
 }
 
+let heap_goto = document.getElementById('heap_goto');
+
+
 let stack = document.getElementById('stack');
 let stackBut = document.getElementById('stackBut');
 let queue = document.getElementById('queue');
@@ -515,6 +535,7 @@ stackBut.onclick = function() {
 	queue.classList.add('off');
 	deque.classList.remove('on');
 	deque.classList.add('off');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 queueBut.onclick = function() {
@@ -524,6 +545,7 @@ queueBut.onclick = function() {
 	queue.classList.add('on');
 	deque.classList.remove('on');
 	deque.classList.add('off');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 dequeBut.onclick = function() {
@@ -533,4 +555,10 @@ dequeBut.onclick = function() {
 	queue.classList.add('off');
 	deque.classList.remove('off');
 	deque.classList.add('on');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+
+heap_goto.onclick = function(){
+
+}

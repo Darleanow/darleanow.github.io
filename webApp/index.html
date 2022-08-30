@@ -100,7 +100,7 @@
                     <div id="feedback_text" class="unactive_content_text content_feedback_menu">
                         Un bug ? Une suggestion ? <a href="mailto: darleanowreceive@yahoo.com">Contactez moi !</a>
                         <div id="append_child_img_contact" class="img_container_contact_form">
-
+    
                         </div>
                     </div>
                     <div id="soon_text" class="unactive_content_text content_soon_menu">
@@ -109,6 +109,7 @@
                     </div>
                 </div>
             </span>
+            
         </div>
         </div>
         <div id="second_menu"class="wrapper_second_left_menu">
@@ -200,78 +201,221 @@
                 <p class="main_content_title">\ Stack </p>
             </div>
             <div class="wrapper_article_content">
-                <p class="paragraph_content_text">
-                    La stack (ou pile) est une méthode en Algorithmie, elle est beaucoup utilisée notamment dans le web, que nous verrons plus tard.<br>
-                    Concretement une stack est un empilement, les méthodes qui lui sont associées permettent d'y ajouter un élément, et de retirer le dernier élément ajouté.<br>
-                    Cela fonctionne un peu comme une pile d'assiettes, vous pouvez en rajouter une, et enlever la dernière.<br>
-                    La maniere la plus simple d'implémenter une stack est d'utiliser une méthode d'array.<br>
-                    La stack possede une complexité de O(1).<br>
-                    A savoir que la librairie standard possède une méthode de stack.
-                    <br><br><br>
-                    Applications :<br><br>
-                    - Web: <br>
-                    &emsp;Les bouttons en haut a gauche de votre navigateur permettant d'aller aux onglets précédents fonctionnent comme une stack.<br>
-                    &emsp;Votre navigateur va enregistrer tout vos onglets, lorsque vous cliquez sur le boutton retour, ce dernier vous affichera l'élément le plus en haut de la stack.
-                    <br>- Algorithmes: <br>
-                    &emsp;Permet par exemple d'inverser une string donnée.
-                    <br><br><br>
-                    Logique d'une stack :
-                    <br><br>
-                    &emsp;1. Création d'un pointer "TOP" pour garder la trace de l'élément le plus en haut.<br>
-                    &emsp;2. Lorsque l'on initialise la Stack,on lui donne pour valeur "-1" afin de vérifier que cette dernière est vide.<br>
-                    &emsp;3. Lorsque l'on ajoute un élément, on incrémente la valeur du pointeur "TOP" et placer le nouvel élément a la position pointée par "TOP".<br>
-                    &emsp;4. Quand on enlève un élément, on retourne la valeur pointée par "TOP" et réduisons la valeur de "TOP" de 1.<br>
-                    &emsp;5. Avant de push un élément, on vérifie que la Stack n'est pas pleine.<br>
-                    &emsp;6. Avant de pop un élément, on vérifie que la Stack n'est pas vide.<br>
-                    &emsp;Les bouttons en haut a gauche de votre navigateur permettant d'aller aux onglets précédents fonctionnent comme une stack.<br>
-                    &emsp;Votre navigateur va enregistrer tout vos onglets, lorsque vous cliquez sur le boutton retour, ce dernier vous affichera l'élément le plus en haut de la stack.
-                    <br><br>
-                    <a href="https://github.com/Darleanow/websiteProjects/blob/main/code_samples/Stack.cpp">Cliquez ici pour voir le code de l'exemple.</a>
-                    <br><br>
-                    Pour vérifier que vous avez bien compris, essayez de faire un programme retournant true ou false si le nombre de ( )/[ ]/{ } est correct et fait correctement.<br>
-                    L'exercice est réussi si les cas de test suivant correspondent a ceux attendus.<br>
-                    "(()[]]{)" = false <br>
-                    "(()[])" &nbsp;&nbsp;&nbsp;= true <br>
-                    "((()][))" = false <br>
-                    "({{}[]})" = true <br>
+                <p>
+                    Dans ce tutoriel, vous apprendrez a comprendre comment la stack fonctionne. <br>
+                    Bien qu’il existe une librairie proposant son implémentation, il est important de comprendre comment cette structure fonctionne.<br>
+                </p>
+                <h2>
+                    Métaphore
+                </h2>
+                <p>
+                    Imaginez une pile d’assiettes.<br>
+                    Maintenant, imaginez que vous vouliez en prendre une, quel serait l’emplacement de cette assiette ?<br>
+                    Et maintenant, imaginons que vous ne voulez plus de l’assiette, vous la reposez.<br><br>
+
+                    Cette illustration montre parfaitement comment fonctionne une stack.<br>
+                    Vous avez interagit uniquement avec le haut de la pile.<br>
+                </p>
+                <h2>
+                    Concept
+                </h2>
+                <p>
+                    En programmation/algorithmie, on appelle cela « LIFO » e.g. Last In First Out.<br><br>
+
+                    Il existe plusieurs méthodes associées à la stack :<br>
+                    -Push --> Ajout d’un élément dans une stack<br>
+                    -Pop --> Suppression de l’élément le plus en haut<br>
+                    -Peek --> Récupérer l’élément le plus en haut sans le supprimer<br>
+                </p>
+                <h2>
+                    Fonctionnement d’une stack
+                </h2>
+                <p>
+                    1.Init d’un pointeur qui permet de garder la trace de l’élément le plus en haut.<br>
+                    2.On donne sa valeur a -1, cette valeur d’index nous dira si notre stack est vide.<br>
+                    3.Lorsque l’on ajoute un élément, on ajoute 1 au pointeur, cette nouvelle adresse pointe vers l’élément<br>
+                    4.Lorsque l’on « pop », on retourne la valeur pointée par le pointeur et on ajoute -1 a sa valeur.<br>
+                    5.Avant de push, on vérifie si la stack est pleine.<br>
+                    6.Avant de pop, on vérifie que la stack ne soit pas vide.<br>
+                </p>
+                <h2>
+                    Cas concrets
+                </h2>
+                <p class="listing_from_title">
+                    -Inversion d’un mot ( comme le ::-1 en python).<br>
+                    -Retour arrière sur un navigateur<br>
+                </p>
+                <h2>
+                    Connexe 
+                </h2>
+                <p>
+                    Complexité : O(1).<br>
+                    <a class="hyperlink_text" href="https://github.com/Darleanow/websiteProjects/tree/main/code_samples/Stack" target="_blank">Cliquez ici pour voir le code de l’exemple (Python/C++).</a>
                 </p>
             </div>
         </div>
         <div id="queue" class="main_content off">
             <div class="line_holder">
-                <p class="main_content_title">\ Files</p>
+                <p class="main_content_title">\ Queue</p>
             </div>
             <div class="wrapper_article_content">
-                <p class="paragraph_content_text">
-                    Une file est une méthode d'algorithmie similaire aux queues que l'on peut retrouver dans les cinémas. <br>
-                    La personne tout devant aura son ticket avant la dernière personne. <br> <br>
-                    La structure file respecte la règle FIFO (First In First Out), en effet, le premier élément est aussi le premier à sortir. <br> <br>
-                    A savoir que la librairie Standard C++ propose une méthode de file.<br>
-                    La file possède une complexité de O(1).
-                    Il existe plusieurs méthodes associées a la file : <br>
-                    &emsp;-l'enfile  => Ajout d'items dans la file <br>
-                    &emsp;-la défile => Enlèvement d'items de la file <br>
-                    &emsp;-Peek      => Récuperer la valeur du devant de la file sans l'enlever (contrairement a la méthode "pop" qui elle l'enlève aussi).<br>
-                    <br> <br>
-                    Fonctionnement d'une file : <br>
-                    &emsp;- Deux pointeurs "FRONT" et "REAR" (front = devant ; rear = arrière) <br>
-                    &emsp;- Le pointeur "FRONT" traque le premier élément de la file <br>
-                    &emsp;- Le pointeur "REAR" traque le dernier élément de la file <br>
-                    &emsp;- Lors de l'init, on met la valeur de "FRONT" et "REAR" a -1
-                    <br> <br> <br>
-                    Opérations sur la file: <br>
-                    &emsp;- Enfile: <br>
-                    &emsp;&emsp;- On vérifie si la file est pleine. <br>
-                    &emsp;&emsp;- Pour le premier élément, on met la valeur du pointeur "FRONT" a 0. <br>
-                    &emsp;&emsp;- On augmente l'indexe du pointeur "REAR" de 1. <br>
-                    &emsp;&emsp;- Ajout de l'élément sur la position pointée par "REAR". <br> <br>
-                    &emsp;- Défile : <br>
-                    &emsp;&emsp;- On vérifie si la file est pleine. <br> 
-                    &emsp;&emsp;- On retourne la valeur pointée par "FRONT". <br> 
-                    &emsp;&emsp;- On augmente l'indexe du pointeur "FRONT" par 1. <br>
-                    &emsp;&emsp;- Pour le dernier élément, on réinitialise les valeurs de "FRONT" et "REAR" a -1. <br> <br>
-                    <a href="https://github.com/Darleanow/websiteProjects/blob/main/code_samples/Queue.cpp">Cliquez ici pour voir le code de l'exemple.</a>
+                <p>
+                    Dans ce tutoriel, vous apprendrez a comprendre comment la Queue fonctionne. 
                 </p>
+                <h2>
+                    Métaphore
+                </h2>
+                <p>
+                    Vous vous rendez au cinéma, et la queue parait extrêmement longue, au fur et a mesure que vous vous rapprochez du vendeur, vous voyez la queue se réduire petit à petit.<br>
+                    L’élément qui arrive en premier repart le premier.<br>
+                </p>
+                <h2>
+                    Concept
+                </h2>
+                <p>
+                    En programmation/algorithmie, on appelle cela « FIFO » e.g. First In First Out.<br>
+                    Il existe quatre types fondamentaux pour les Queues :<br>
+                    -Queue basique<br>
+                    -Queue circulaire<br>
+                    -Queue a priorité<br>
+                    -Queue a deux terminaisons<br>
+                </p>
+                <h2>
+                    Queue basique
+                </h2>
+                <p>
+                    C’est la plus simple a appréhender !<br>
+                    Il existe 5 opérations basiques sur la queue (cliquer ici pour plus de détails) :<br>
+                    -Enqueue --> Ajout d’élément a la fin <br>
+                    -Dequeue (ne pas confondre avec Deque, que nous verrons plus tard) -->Suppression d’élément au début<br>
+                    -IsEmpty --> Booléen pour savoir si la Queue est vide<br>
+                    -IsFull --> Booléen pour savoir si la Queue est pleine<br>
+                    -Peek --> Récupérer la valeur du premier élément de la queue sans l’enlever<br>
+                </p>
+                <h3>
+                    Fonctionnement d'une Queue Basique
+                </h3>
+                <p>
+                    1.Deux pointeurs FRONT et REAR, FRONT pour le devant et REAR pour la fin.<br>
+                    2.On donne pour valeur aux deux pointeurs -1 lorsque la Queue ne contient aucun élément.<br>
+                    3.Ajout d’une valeur, les deux pointeurs pointent vers cet unique élément.<br>
+                    4.Ajout d’une seconde valeur, le pointeur FRONT a l’addresse de la deuxième valeur, tandis que le pointeur REAR garde celui de la premiere valeur, et ainsi de suite lors d’un push.<br>
+                    5.Dequeue sur le premier élément, le pointeur REAR pointe maintenant vers l’addresse de la deuxième valeur, et ainsi de suite jusqu’à vider la queue, une fois vide, les deux pointeurs sont a -1.<br>
+                </p>
+                <h3>
+                    Cas concret
+                </h3>
+                <p>
+                    -Quand de la data est transférée de manière asynchrone entre deux processus, la Queue est utilisée pour la synchronisation.<br>
+                    -Centres téléphoniques pour réponse aux clients dans l’ordre.<br>
+                </p>
+                <h3>
+                    Connexe
+                </h3>
+                <p>
+                    Complexité : O(1) si utilisation d’un array, pour mon implémentation python, la complexité est de O(n).<br>
+                    <a class="hyperlink_text" href="https://github.com/Darleanow/websiteProjects/tree/main/code_samples/Queue/BasicQueue" target="_blank">Cliquez ici pour voir le code (Python/C++)</a>
+                </p>
+                <h2>
+                    Queue Circulaire
+                </h2>
+                <p>
+                    Presque identique à la Queue basique, celle-ci voit son dernier élément relié au premier.<br>
+                    Elle permet de régler le problème qui rendait une Queue inutilisable après l’avoir remplie est vidée, car on ne peut pas la parcourir dans l’autre sens.<br>
+                    Imaginez l’utilisation de l’opérateur modulo, On a une Queue de longueur 6, le pointeur REAR est a 6, et on incrémente d’un élément. 6+1 --> Overflow si queue basique<br>
+                    En revanche, avec la queue circulaire, (6+1)%6=1.<br>
+                    A noter qu’il n’est pas possible d’écrire par-dessus un élément.<br>
+                    Les opérations sont les mêmes.<br>
+                </p>
+                <h3>
+                    Cas concret
+                </h3>
+                <p>
+                    -Gestion de la mémoire<br>
+                    -Organisation CPU<br>
+                </p>
+                <h3>
+                    Connexe
+                </h3>
+                <p>
+                    Complexité: O(1) pour les implémentations avec Array.<br>
+                    <a class="hyperlink_text" href="https://github.com/Darleanow/websiteProjects/tree/main/code_samples/Queue/CircularQueue" target="_blank">Cliquez ici pour voir le code (Python/C++)</a><br>
+                </p>
+                <h2>
+                    Queue à priorité
+                </h2>
+                <p>
+                    Accrochez-vous, cela risque d’être un peu plus complexe à appréhender.<br>
+                    Chaque élément possède une value priorité, la gestion de cette priorité peut dépendre, mais en général, elle est associée a la valeur de l’élément.<br>
+                    A noter que si deux éléments ont une priorité identique, l’élément est choisit en fonction de son emplacement dans la Queue.<br>
+                    On suit toujours la regle FIFO, mais cette fois, en fonction de la priorité d’un élément, l’élément qui possède la plus haute priorité est supprimé en premier.<br>
+
+                    Il existe 4 opération simples pour cette structure de données :<br>
+                    -Insertion<br>
+                    -Délétion<br>
+                    -Peek (Min Heap,Max Heap)<br>
+                    -Pop (Min Heap,Max Heap)<br><br>
+
+                    Il est nécessaire de connaitre ce qu’est un tas, aussi appelé <a id="heap_goto" class="hyperlink_text heap_clicker">Heap</a>.<br>
+                </p>
+                <h3>
+                    Fonctionnement d'une Queue à priorités
+                </h3>
+                <p>
+                    Imaginez un arbre (en algorithmie bien sûr !).<br>
+                    Vous avez le premier élément, 9, qui possède deux enfants 4 et 5, 4 a deux enfants, 1 et 2, tandis que 5 n'a que 3.<br>
+                    Vous ajoutez a votre Queue la valeure 7. A ce moment précis, elle est toujours enfant de 5, en revanche, lorsque vous allez "Heapifier" votre abre, le 7 remplacera la valeur de son parent jusqu'à ce qu'il soit inferieur a son parent et superieur a son enfant.<br>
+                    Attention ! On est dans le cadre d'un triage Max Heap, si on était en min Heap le 7 n'aurait pas bougé dans ce contexte la.<br><br><br>
+                    Voici a quoi ressemble l'algorithme pour l'ajout dans une Queue à priorité:<br>
+                    <p class="code_sample">
+                        Si pas de noeud,<br> 
+                        &nbsp;&nbsp;&nbsp;créer un noeud<br>
+                        sinon (noeud existant)<br>
+                        &nbsp;&nbsp;&nbsp;insérer noeud a la fin (Dernier noeud de droite a gauche.)<br>
+                        <br>
+                        "Heapifier" l'arbre.<br>
+                    </p>
+                </p>
+                <p>
+                    Si vous avez compris ça, le reste sera du gateau! <br><br>
+                    Pour la délétion, rien de plus simple:<br>
+                    -On récupere l'indexe de l'élément que l'on souhaite supprimer (son indice de priorité donc !)<br>
+                    -On échange sa place avec le dernier élément.<br>
+                    -On supprime le dernier élément.<br>
+                    -On va ensuite "Heapifier" notre arbre.<br><br>
+                    Voici a quoi ressemble l'algorithme:<br>
+                    <p class="code_sample">
+                        Si noeud_a_supprimer est le dernier<br>
+                        &nbsp;&nbsp;&nbsp;supprimer le noeud<br>
+                        Sinon déplacer noeud_a_supprimer en bas a droite de l'arbre<br>
+                        &nbsp;&nbsp;&nbsp;supprimer le noeud<br>
+                        <br>
+                        "Heapifier" l'arbre.<br>
+                    </p>
+                </p>
+                <p>
+                    Enfin, pour faire un peek, il suffit de retourner le noeud en bas a droite !
+                </p>
+                <h3>
+                    Cas concrets
+                </h3>
+                <p>
+                    -Implémentation d'une stack.<br>
+                    -L'algorithme de Dijkstra.<br>
+                    -Compression de data dans le code d'Huffman
+                </p>
+                
+                <p>
+                    <a class="hyperlink_text" href="https://github.com/Darleanow/websiteProjects/tree/main/code_samples/Queue/PriorityQueue" target="_blank">Cliquez ici pour voir le code (Python/C++)</a><br>
+                </p>
+                <p>
+                    CF --> <a class="hyperlink_text" href="https://www.javatpoint.com/ds-priority-queue" target="_blank">ici pour plus d'informations.</a> 
+                </p>
+                
+
+
+
+                
             </div>
         </div>
         <div id="deque" class="main_content off">
@@ -295,6 +439,8 @@
             </div>
         </div>
         -->
+        
+        </div>
         <script src="../js/webApp.js"></script>
     </body>
 </html>
