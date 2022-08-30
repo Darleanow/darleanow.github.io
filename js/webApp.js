@@ -328,20 +328,20 @@ let open = document.getElementById('hide_menu');
 let close = document.getElementById('view_menu');
 
 close.onclick = function() {
-	close.classList.remove('on');
-	close.classList.add('off');
-	open.classList.remove('off');
-	open.classList.add('on');
+	close.classList.remove('onn');
+	close.classList.add('offf');
+	open.classList.remove('offf');
+	open.classList.add('onn');
 	second_menu.style.display = 'none';
 	main_content.style.marginLeft = '30px';
 	border_first_menu.style.borderRight = '2px solid ' + defaulT;
 }
 
 open.onclick = function() {
-	close.classList.remove('off');
-	close.classList.add('on');
-	open.classList.remove('on');
-	open.classList.add('off');
+	close.classList.remove('offf');
+	close.classList.add('onn');
+	open.classList.remove('onn');
+	open.classList.add('offf');
 	second_menu.style.display = '';
 	main_content.style.marginLeft = '370px';
 	border_first_menu.style.borderRight = '';
