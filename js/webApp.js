@@ -702,9 +702,10 @@ let primAlgoBut =document.getElementById('primAlgoBut');
 let huffmanAlgo = document.getElementById('huffmanAlgo');
 let huffmanAlgoBut =document.getElementById('huffmanAlgoBut');
 
-function off_All_Algo(){
-	stack.classList.remove('on');
-	stack.classList.add('off');
+
+stackBut.onclick = function() {
+	stack.classList.add('on');
+	stack.classList.remove('off');
 	queue.classList.remove('on');
 	queue.classList.add('off');
 	deque.classList.remove('on');
@@ -760,176 +761,170 @@ function off_All_Algo(){
 	huffmanAlgo.classList.remove('on');
 	huffmanAlgo.classList.add('off');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-stackBut.onclick = function() {
-	off_All_Algo();
-	stack.classList.add('on');
-	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 queueBut.onclick = function() {
-	off_All_Algo();
+	
 	queue.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 dequeBut.onclick = function() {
-	off_All_Algo();
+	
 	deque.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 linkBut.onclick = function() {
-	off_All_Algo();
+	
 	link.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 hashBut.onclick = function() {
-	off_All_Algo();
+	
 	hash.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 heapBut.onclick = function() {
-	off_All_Algo();
+	
 	heap.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 binTreeBut.onclick = function() {
-	off_All_Algo();
+	
 	binTree.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 avlTreeBut.onclick = function() {
-	off_All_Algo();
+	
 	avlTree.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 bminusTreeBut.onclick = function() {
-	off_All_Algo();
+	
 	bminusTree.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 bplusTreeBut.onclick = function() {
-	off_All_Algo();
+	
 	bplusTree.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 rminusBTreeBut.onclick = function() {
-	off_All_Algo();
+	
 	rminusBTree.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 linSearchBut.onclick = function() {
-	off_All_Algo();
+	
 	linSearch.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 binSearchBut.onclick = function() {
-	off_All_Algo();
+	
 	binSearch.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 bubbleSortBut.onclick = function() {
-	off_All_Algo();
+	
 	bubbleSort.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 selectionSortBut.onclick = function() {
-	off_All_Algo();
+	
 	selectionSort.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 insertionSortBut.onclick = function() {
-	off_All_Algo();
+	
 	insertionSort.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 mergeSortBut.onclick = function() {
-	off_All_Algo();
+	
 	mergeSort.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 quickSortBut.onclick = function() {
-	off_All_Algo();
+	
 	quickSort.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 countingSortBut.onclick = function() {
-	off_All_Algo();
+	
 	countingSort.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 radixSortBut.onclick = function() {
-	off_All_Algo();
+	
 	radixSort.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 bucketSortBut.onclick = function() {
-	off_All_Algo();
+	
 	bucketSort.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 heapSortBut.onclick = function() {
-	off_All_Algo();
+	
 	heapSort.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 shellSortBut.onclick = function() {
-	off_All_Algo();
+	
 	shellSort.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 greedAlgoBut.onclick = function() {
-	off_All_Algo();
+	
 	greedAlgo.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 dijkstraAlgoBut.onclick = function() {
-	off_All_Algo();
+	
 	dijkstraAlgo.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 kruskalAlgoBut.onclick = function() {
-	off_All_Algo();
+	
 	kruskalAlgo.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 primAlgoBut.onclick = function() {
-	off_All_Algo();
+	
 	primAlgo.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 huffmanAlgoBut.onclick = function() {
-	off_All_Algo();
+	
 	huffmanAlgo.classList.add('on');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 heap_goto.onclick = function(){
 
-}
+};
