@@ -2,13 +2,11 @@
 const delay = ms => new Promise(res => setTimeout(res, ms));
 addEventListener('load', (event) => {
 	window.scrollTo({ top: 0, behavior: 'smooth' });
-	var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
-	var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
-	var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
-	var is_safari = navigator.userAgent.indexOf("Safari") > -1;
-	var is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
-	if ((is_chrome)&&(is_safari)) { is_safari = false; }
-	if (!(is_safari)){
+	if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+		var element = document.getElementById("body");
+		element.classList.remove("class_remove_onload");
+	}
+	else{
 		setTimeout(function(){
 			document.querySelectorAll('.loading_screen').forEach(e => e.remove())
 		}, 3000);
@@ -20,11 +18,6 @@ addEventListener('load', (event) => {
 			  element.classList.remove("class_remove_onload");
 		},3000);
 	}
-	else{
-		var element = document.getElementById("body");
-		element.classList.remove("class_remove_onload");
-	}
-	
 });
 
 
