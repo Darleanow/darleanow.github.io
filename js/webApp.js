@@ -7,7 +7,7 @@ addEventListener('load', (event) => {
 	}, 3000);
 	setTimeout(function(){
 		var element = document.getElementById("body");
-			element.classList.remove("class_remove_onload");
+		element.classList.remove("class_remove_onload");
 	},3000);
 });
 
