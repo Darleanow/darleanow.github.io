@@ -94,72 +94,58 @@ p{
 	font-weight: 300;
 	font-size:20px;
 }
-/*REMOVE ONLOAD*/
+
 .loading_screen{
 	z-index: 150;
-	
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #1c1d1d;
+	background: radial-gradient(#CECECE, #fff);
+	justify-content: center;
+	align-items: center;
+	display: flex;
 }
-.svg-def {
+
+.container_load {
+	width: 350px;
+	height: 350px;
+	border-radius: 100%;
+	background: linear-gradient(165deg, rgba(255,255,255,1) 0%, rgb(220, 220, 220) 40%, rgb(170, 170, 170) 98%, rgb(10, 10, 10) 100%);
+	position: relative;
+}
+.loader {
+	
+}
+
+.loader:before {
 	position: absolute;
-	width: 0;
-	height: 0;
-  }
-  .main-view-container {
+	content: '';
 	width: 100%;
 	height: 100%;
-	margin: 0;
-	padding: 0;
-	background-color: #1c1d1d;
-	perspective: 500;
-	-webkit-perspective: 500;
-  }
-  .loader-container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
+	border-radius: 100%;
+	border-bottom: 0 solid #ffffff05;
+	
+	box-shadow: 
+		0 -10px 20px 20px #ffffff40 inset,
+		0 -5px 15px 10px #ffffff50 inset,
+		0 -2px 5px #ffffff80 inset,
+		0 -3px 2px #ffffffBB inset,
+		0 2px 0px #ffffff,
+		0 2px 3px #ffffff,
+		0 5px 5px #ffffff90,
+		0 10px 15px #ffffff60,
+		0 10px 20px 20px #ffffff40;
+	filter: blur(3px);
+	animation: 2s rotate linear infinite;
+}
 
-  }
-  .animate{
-	-webkit-animation: slide-out-fwd-center 0.8s linear both;
-	        animation: slide-out-fwd-center 0.8s linear both;
-  }
-  @-webkit-keyframes slide-out-fwd-center {
-	0% {
-	  -webkit-transform: translateZ(1);
-			  transform: translateZ(1);
-	  opacity: 1;
-	}
+@keyframes rotate {
 	100% {
-	  -webkit-transform: translateZ(600px);
-			  transform: translateZ(600px);
-	  opacity: 0;
+		transform: rotate(360deg)
 	}
-  }
-  @keyframes slide-out-fwd-center {
-	0% {
-	  -webkit-transform: translateZ(1);
-			  transform: translateZ(1);
-	  opacity: 1;
-	}
-	100% {
-	  -webkit-transform: translateZ(600px);
-			  transform: translateZ(600px);
-	  opacity: 0;
-	}
-  }
-  
-  .reflection {
-	transform-origin: 50% 110%;
-	transform: scaleY(-1);
-	opacity: 0.09;
-  }
-  
+}
 
 .hyperlink_text{
 	font-family: 'Varela Round', sans-serif;
