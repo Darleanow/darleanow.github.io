@@ -113,7 +113,8 @@
                         </div>
                     </div>
                     <div id="soon_text" class="unactive_content_text content_soon_menu">
-                        TODO :))
+                        -Python:<br>
+                        &nbsp;&nbsp;&nbsp;J'avais comme idée de faire une sorte de base de connaissances, vous pourriez me poser vos questions par mail, j'y répondrais en ajoutant un article par exemple :)
                     </div>
                     </div>
                 </div>
@@ -165,11 +166,11 @@
                     </ul>
                     <div id="first_parent" class="toggler firstParent">Algorithmes aggressifs</div>
                     <ul id="first_child" class="toggler-target" style="margin-left: 15px;">
-                        <li id="greedAlgo" class="childElem">Greedy Algorithm</li>
-                        <li id="dijkstraAlgo" class="childElem">Dijkstra's Algorithm</li>
-                        <li id="kruskalAlgo" class="childElem">Kruskal's Algorithm</li>
-                        <li id="primAlgo" class="childElem">Prim's Algorithm</li>
-                        <li id="huffmanAlgo" class="childElem">Huffman Code</li>
+                        <li id="greedAlgoBut" class="childElem">Greedy Algorithm</li>
+                        <li id="dijkstraAlgoBut" class="childElem">Dijkstra's Algorithm</li>
+                        <li id="kruskalAlgoBut" class="childElem">Kruskal's Algorithm</li>
+                        <li id="primAlgoBut" class="childElem">Prim's Algorithm</li>
+                        <li id="huffmanAlgoBut" class="childElem">Huffman Code</li>
                     </ul>
                     </ul>
                 </div>
@@ -219,8 +220,8 @@
                 </h2>
                 <p>
                     Imaginez une pile d’assiettes.<br>
-                    Maintenant, imaginez que vous vouliez en prendre une, quel serait l’emplacement de cette assiette ?<br>
-                    Et maintenant, imaginons que vous ne voulez plus de l’assiette, vous la reposez.<br><br>
+                    Maintenant, imaginez que vous vouliez en prendre une, a moins que vous viviez dans un univers parallèle, l'assiette devrait se trouver en haut.<br>
+                    Et maintenant, imaginons que vous ne voulez plus de l’assiette, vous la reposez en haut.<br><br>
 
                     Cette illustration montre parfaitement comment fonctionne une stack.<br>
                     Vous avez interagit uniquement avec le haut de la pile.<br>
@@ -240,10 +241,10 @@
                     Fonctionnement d’une stack
                 </h2>
                 <p>
-                    1.Init d’un pointeur qui permet de garder la trace de l’élément le plus en haut.<br>
-                    2.On donne sa valeur a -1, cette valeur d’index nous dira si notre stack est vide.<br>
-                    3.Lorsque l’on ajoute un élément, on ajoute 1 au pointeur, cette nouvelle adresse pointe vers l’élément<br>
-                    4.Lorsque l’on « pop », on retourne la valeur pointée par le pointeur et on ajoute -1 a sa valeur.<br>
+                    1.Création d'un pointeur "TOP" qui nous permet de garder la trace de l'élément le plus en haut.<br>
+                    2.Lors de la création de la stack, on met sa valeur a -1, pour voir si elle est vide en comparant TOP==-1.<br>
+                    3.Lorsque l'on ajoute un élément, on augmente la valeur de TOP, et on positionne l'élément sur l'addresse pointée par TOP.<br>
+                    4.Pour enlever un élément, on récupere l'élément pointé par TOP et réduisons la valeur du pointeur.<br>
                     5.Avant de push, on vérifie si la stack est pleine.<br>
                     6.Avant de pop, on vérifie que la stack ne soit pas vide.<br>
                 </p>
@@ -419,12 +420,7 @@
                 </p>
                 <p>
                     CF --> <a class="hyperlink_text" href="https://www.javatpoint.com/ds-priority-queue" target="_blank">ici pour plus d'informations.</a> 
-                </p>
-                
-
-
-
-                
+                </p>               
             </div>
         </div>
         <div id="deque" class="main_content off">
@@ -432,20 +428,299 @@
                 <p class="main_content_title">\ Deque</p>
             </div>
             <div class="wrapper_article_content">
-                <p class="paragraph_content_text">
+                <p>
+                    Dans ce cours, vous verrez comment fonctionne une Deque (Double Ended Queue).<br>
+                </p>
+                <h2>
+                    Métaphore
+                </h2>
+                <p>
+                    Une queue a double faimn c’est comme un obèse qui hésite entre un twix et un mars, au final il mange les deux ! <br>
+                    Plus sérieusement, la Deque est une double Queue.<br>
+                    On peut insérer des éléments au début, comme à la fin !<br>
+                </p>
+                <h2>
+                    Types de Deques
+                </h2>
+                <p>
+                    -Input Restricted Queue 
+                    Pour cette Deque, l’entrée est restreinte a une seule fin, mais autorise la délétion aux deux fins.<br>
+                    <br>
+                    -Ouput Restricted Queue
+                    Pour cette Deque, la sortie est restreinte a une seule fin, mais autorise l’insertion aux deux fins.<br>
+                    <br>
+                </p>
+                <h2>
+                    Opérations sur une deque (dans le cas d’une implémentation circulaire)
+                </h2>
+                <p>
+                    <h3>
+                        -Insertion par devant<br>
+                    </h3>
+                    <p>
+                        On vérifie la position du pointeur Front<br>
+                        Si front < 1 : front = n-1 (dernier index) (La ou n est la taille de l’array)<br>
+                        Sinon valeur de front -=1<br>
+                        Ajouter la valeur sur array[front] (L’index pointé par front)<br>
+                    </p>
+                    <h3>
+                        -Insertion par derrière
+                    </h3>
+                    <p>
+                        On verifie que la deque n’est pas pleine<br>
+                        Si c’est le cas, le pointeur Rear prend la valeur 0 (index)<br>
+                        Sinon, augmenter Rear par 1<br>
+                        Ajouter la valeur voulue sur array[Rear]<br>
+                    </p>
+                    <h3>
+                        Délétion par devant
+                    </h3>
+                    <p>
+                        On vérifie que la deque ne soit pas vide<br>
+                        Si elle vide, Front a la valeur -1, la délétion ne peut pas être faite.<br>
+                        Si la deque ne possède qu’un élément, alors Front=Rear, alors valeur de Front et Rear == -1<br>
+                        Sinon si Front est a la fin (front = n-1), alors Front = 0<br>
+                        Sinon, Front = Front +1
+                    </p>
+                    <h3>
+                        Délétion par derrière
+                    </h3>
+                    <p>
+                        On vérifie que la deque ne soit pas vide.<br>
+                        Si elle est vide, alors Front devrait avoir comme valeur -1, on ne peut pas faire de délétion.<br>
+                        Si la deque n’a qu’un élément, et que donc Rear=0, mettre Rear a n-1<br>
+                        Sinon, rear=rear-1<br>
+                    </p>
+                    <h3>
+                        Vérifier si la deque est vide
+                    </h3>
+                    <p>
+                        Simplement, si le pointeur Front == -1, alors la deque est vide.<br>
+                    </p>
+                    <h3>
+                        Vérifier si la deque est pleine.
+                    </h3>
+                    <p>
+                        Si Front==0 et que Rear==n-1 OU front == rear+1, la deque est pleine
+                    </p>
+                </p>                                     
+                <h2>
+                    Cas Concrets
+                </h2>
+                <p>
+                    Enregistrement des historiques sur les navigateurs
+                    L’implémentation des Piles et des Files de la librairie standard (C++) utilise la Deque pour ce faire.
+                </p>
+                <h2>
+                    Connexe
+                </h2>
+                <p>
+                    Complexité: O(1).<br>
+                    <a class="hyperlink_text" href="https://github.com/Darleanow/websiteProjects/tree/main/code_samples/Deque" target="_blank">Cliquez ici pour voir le code de l’exemple.</a>
                 </p>
             </div>
         </div>
-        <div id="deque" class="main_content off">
+        <div id="link" class="main_content off">
             <div class="line_holder">
-                <p class="main_content_title">\ Deque</p>
+                <p class="main_content_title">\ Linked List</p>
             </div>
             <div class="wrapper_article_content">
-                <p class="paragraph_content_text">
-                </p>
             </div>
         </div>
         </div>
+        <div id="hash" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Hash Table</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="heap" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Heap</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="binTree" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Arbre binaire</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="avlTree" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Arbre AVL</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="bminusTree" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Arbre B-</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="bplusTree" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Arbre B+</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="rminusBTree" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Arbre R-B</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="linSearch" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Recherche Linéaire</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="binSearch" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Recherche Binaire</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="bubbleSort" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Bubble Sort</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="selectionSort" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Selection Sort</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="insertionSort" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Insertion Sort</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="mergeSort" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Merge Sort</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="quickSort" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Quick Sort</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="countingSort" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Counting Sort</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="radixSort" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Radix Sort</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="bucketSort" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Bucket Sort</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="heapSort" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Heap Sort</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="shellSort" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Shell Sort</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="greedAlgo" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Greedy Algorithm</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="dijkstraAlgo" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Dijkstra's Algorithm</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="kruskalAlgo" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Kruskal Algorithm</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="primAlgo" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Prim's Algorithm</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+        <div id="huffmanAlgo" class="main_content off">
+            <div class="line_holder">
+                <p class="main_content_title">\ Huffman Algorithm</p>
+            </div>
+            <div class="wrapper_article_content">
+            </div>
+        </div>
+        </div>
+
         <!--
         <div class="wrapper_main">
             <div class="wrapper_main_navbar">

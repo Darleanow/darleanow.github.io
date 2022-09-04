@@ -112,11 +112,8 @@ p{
 	width: 350px;
 	height: 350px;
 	border-radius: 100%;
-	background: linear-gradient(165deg, rgba(255,255,255,1) 0%, rgb(220, 220, 220) 40%, rgb(170, 170, 170) 98%, rgb(10, 10, 10) 100%);
+	background: linear-gradient(165deg, rgb(27, 27, 27) 0%, rgb(48, 48, 48) 40%, rgb(80, 80, 80) 98%, rgbrgb(112, 112, 112)0%);
 	position: relative;
-}
-.loader {
-	
 }
 
 .loader:before {
@@ -359,7 +356,7 @@ ul {
 }
 .wrapper_article_content{
 	display:flex;
-	width: 98%;
+	width: 98%	;
 	flex-direction: column;
 }
 .paragraph_content_text {
