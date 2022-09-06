@@ -134,7 +134,7 @@
                         <li id="stackBut" class="childElem">Stack</li>
                         <li id="queueBut" class="childElem">Files</li>
                         <li id="dequeBut" class="childElem">Deque</li>
-                        <li id="linkBut" class="childElem">Linked list</li>
+                        <li id="linkBut" class="childElem">Liste Chaînée</li>
                         <li id="hashBut" class="childElem">Hash table</li>
                         <li id="heapBut" class="childElem">Heap</li>
                         <div id="first_parent" class="toggler firstParent">Arbres</div>
@@ -443,7 +443,7 @@
                     Types de Deques
                 </h2>
                 <p>
-                    -Input Restricted Queue <br>
+                    Input Restricted Queue <br>
                     Pour cette Deque, l’entrée est restreinte a une seule fin, mais autorise la délétion aux deux fins.<br>
                     <br>
                     -Ouput Restricted Queue<br>
@@ -455,7 +455,7 @@
                 </h2>
                 <p>
                     <h3>
-                        -Insertion par devant<br>
+                        Insertion par devant<br>
                     </h3>
                     <p>
                         On vérifie la position du pointeur Front<br>
@@ -522,9 +522,131 @@
         </div>
         <div id="link" class="main_content off">
             <div class="line_holder">
-                <p class="main_content_title">\ Linked List</p>
+                <p class="main_content_title">\ Liste Chaînée</p>
             </div>
             <div class="wrapper_article_content">
+                <p>
+                    Dans ce tutoriel, vous allez apprendre comment une Liste Chaînée, et ses déclinaisons fonctionnent.
+                </p>
+                <h2>
+                    Métaphore
+                </h2>
+                <p>
+                    Une liste chainée, c'est comme un chapelet de saucisson : au debut c'est rigolo mais a un moment on en peut plus...<br>
+                </p>
+                <h2>
+                    Types
+                </h2>
+                <p>
+                    Il existe deux types de Listes chaînées : <br>
+                    &nbsp;-La liste chaînée (sans blague !)<br>
+                    &nbsp;-La double liste chaînée<br>
+                </p>
+                <h2>
+                    Méthodes
+                </h2>
+                <p>
+                    <p>
+                        Les méthodes associées restent les mêmes :<br>
+                    </p>
+                    <h3>Insertion au début <br></h3>
+                    <p>
+                        &nbsp; &nbsp;-Allouer mémoire pour un nouveau nœud<br>
+                        &nbsp; &nbsp;-Faire pointer le pointeur vers la valeur souhaitée<br>
+                        &nbsp; &nbsp;-Mettre le nouveau nœud en tant que head<br>
+                        &nbsp; &nbsp;-Faire pointer head vers le nouveau nœud<br><br>
+                    </p>
+                    <h3>Insertion a la fin<br></h3>
+                    <p>
+                        &nbsp; &nbsp;-Allouer mémoire pour un nouveau nœud<br>
+                        &nbsp; &nbsp;-Faire pointer le pointeur vers la valeur souhaitée<br>
+                        &nbsp; &nbsp;-Faire pointer le nouveau nœud vers NULL<br>
+                        &nbsp; &nbsp;-Parcourir la chaîne jusqu’à NULL et pointer vers la nouvelle valeur<br><br>
+                    </p> 
+                    <h3>Insertion au milieu<br></h3>
+                    <p>
+                        &nbsp; &nbsp;-Faire un nouveau nœud (étapes 1 & 2)<br>
+                        &nbsp; &nbsp;-Parcourir la chaîne jusqu’à l’indexe désiré<br>
+                        &nbsp; &nbsp;-Donner l’addresse pointée par le pointeur temp de la boucle au pointeur de notre nouveau nœud
+                    </p>
+                    <br><br>
+                    <h3>Délétion au début</h3>
+                    <p>
+                        &nbsp; &nbsp;-Faire pointer le pointeur HEAD vers le second élément. <br><br>
+                    </p>
+                    
+                    <h3>Délétion au milieu</h3>
+                    <p>
+                        &nbsp; &nbsp;-Itérer jusqu’à n-2 (avant dernier élément) <br>
+                        &nbsp; &nbsp;-Faire pointer n-2 vers NULL<br>
+                        &nbsp; &nbsp;-Jusqu’à ce que temp pointe vers NULL, avancer d’un indexe. <br><br>
+                    </p>
+                    <h3>
+                        Délétion a la fin<br>
+                    </h3>
+                    <p>
+                        &nbsp; &nbsp;-Itérer jusqu’à l’élément désiré-1<br>
+                        &nbsp; &nbsp;-Changer son pointeur vers NULL<br><br>
+                    </p>
+                    <h3>Chercher un élément dans une liste chaînée<br></h3>
+                    <p>
+                        On cherche élément dans notre liste.<br>
+                        On met notre nœud actuel a HEAD<br>
+                        Itérer jusqu’à NULL<br>
+                        A chaque itération, on vérifie que la data du nœud est égale a nœud, on peut retourner la valeur, ou bien true/false. <br>
+                    </p>
+                    <br><br>
+                    <p>
+                        <a class="hyperlink_text" href="https://github.com/Darleanow/websiteProjects/tree/main/code_samples/LinkedList/Methods" target="_blank">Cliquez ici pour voir le code des opérations sur les listes chaînées.</a>
+                    </p>
+                    
+                    
+                </p>
+                <h2>
+                    Liste chaînée
+                </h2>
+                <p>
+                    Les listes chaînées sont l’une des structures de données les plus efficaces.<br>
+                    Elles permettent aussi de consolider ses connaissances sur les pointeurs, elles sont aussi un prérequis pour les graphs et les arbres.
+                </p>
+                <h3>
+                    Cas concrets
+                </h3>
+                <p>
+                    &nbsp;-Table de Hash, Graphs<br>
+                    &nbsp;-Allocation de mémoire dynamique<br>
+                </p>
+                <h3>
+                    Connexe
+                </h3>
+                <p>
+                    Complexité: O(n).<br>
+                    <a class="hyperlink_text" href="https://github.com/Darleanow/websiteProjects/tree/main/code_samples/LinkedList/BasicLinkedList" target="_blank">Cliquez ici pour voir le code de l'exemple</a>
+                </p>
+                <h2>
+                    Double liste chaînée
+                </h2>
+                <p>
+                    Une liste double voit ses nœuds composés par trois choses :<br>
+                    &nbsp;-Un pointeur vers le nœud d’avant<br>
+                    &nbsp;-La data<br>
+                    &nbsp;-Un pointeur vers le nœud d’après<br>
+                    La double liste chaînée se rapproche beaucoup de la liste chaînée classique, il n’est donc pas nécessaire de l’expliquer en détails.<br>
+                </p>
+                <h3>
+                    Concret
+                </h3>
+                <p>
+                    &nbsp;-Ctrl+Z // Ctrl+Y <br>
+                    &nbsp;-Avancer // Reculer sur les navigateurs <br>
+                </p>
+                <h3>
+                    Connexe
+                </h3>
+                <p>
+                    Complexité : O(1) ou O(n) suivant cas.<br>
+                    <a class="hyperlink_text" href="https://github.com/Darleanow/websiteProjects/tree/main/code_samples/LinkedList/Double" target="_blank">Cliquez ici pour voir le code de l’exemple </a>
+                </p>
             </div>
         </div>
         <div id="hash" class="main_content off">
