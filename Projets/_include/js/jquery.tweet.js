@@ -77,7 +77,7 @@
 		}
 
 		$.fn.extend({
-			linkUser: replacer(/(^|[\W])@(\w+)/gi, "$1<span class=\"at\">@</span><a href=\"http://"+s.twitter_url+"/$2\">$2</a>"),
+			linkUser: replacer(/(^|[\W])@(\w+)/gi, "$1<span class=\"at\">@</span><a href=\"https://"+s.twitter_url+"/$2\">$2</a>"),
 			// Support various latin1 (\u00**) and arabic (\u06**) alphanumeric chars
 			linkHash: replacer(/(?:^| )[\#]+([\w\u00c0-\u00d6\u00d8-\u00f6\u00f8-\u00ff\u0600-\u06ff]+)/gi,
 				' <a href="https://twitter.com/search?q=%23$1'+((s.username && s.username.length == 1 && !s.list) ? '&from='+s.username.join("%2BOR%2B") : '')+'" class="tweet_hashtag">#$1</a>'),
@@ -86,7 +86,7 @@
 
 		function linkURLs(text, entities) {
 			return text.replace(url_regexp, function(match) {
-				var url = (/^[a-z]+:/i).test(match) ? match : "http://"+match;
+				var url = (/^[a-z]+:/i).test(match) ? match : "https://"+match;
 				var text = match;
 				for(var i = 0; i < entities.length; ++i) {
 					var entity = entities[i];
@@ -205,7 +205,7 @@
 				return ('user' in item) ?
 					item.user.profile_image_url_https :
 					extract_avatar_url(item, false).
-					replace(/^http:\/\/[a-z0-9]{1,3}\.twimg\.com\//, "https://s3.amazonaws.com/twitter_production/");
+					replace(/^https:\/\/[a-z0-9]{1,3}\.twimg\.com\//, "https://s3.amazonaws.com/twitter_production/");
 			} else {
 				return item.profile_image_url || item.user.profile_image_url;
 			}
@@ -226,7 +226,7 @@
 			o.tweet_time = parse_date(item.created_at);
 			o.join_text = s.join_text == "auto" ? build_auto_join_text(item.text) : s.join_text;
 			o.tweet_id = item.id_str;
-			o.twitter_base = "http://"+s.twitter_url+"/";
+			o.twitter_base = "https://"+s.twitter_url+"/";
 			o.user_url = o.twitter_base+o.screen_name;
 			o.tweet_url = o.user_url+"/status/"+o.tweet_id;
 			o.reply_url = o.twitter_base+"intent/tweet?in_reply_to="+o.tweet_id;
