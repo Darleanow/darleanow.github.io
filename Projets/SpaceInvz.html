@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="author" content="templatemo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Space Invaders</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-liberty-market.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 577 Liberty Market
+
+https://templatemo.com/tm-577-liberty-market
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="explore.html">Découvrir</a></li>
+                        <li><a href="details.html" class="active">Space Invaders</a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+
+  <div class="item-details-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="left-image">
+            <img src="assets/images/space_invzdetails.png" alt="" style="border-radius: 20px;">
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <h4>Space Invaders</h4>
+          <span class="author">
+            <img src="assets/images/1664113951736.jpg" alt="" style="max-width: 50px; border-radius: 50%;">
+            <h6>Enzo Hugonnier<br><a href="#">@Darleanow</a></h6>
+          </span>
+          <p>
+            Space Invaders est une copie du jeu original, en version minimaliste.<br>
+            Il existe trois type de monstres qui ont des hp différents (. * O).
+            Le système se base sur un fonctionnement en "ticks", concrètement on a une boucle infinie qui se met a jour toutes les 100 ms.
+          </p>
+          <button type="submit" onclick="window.open('./assets/installerz/SpaceInvaders.msi')" class="main-button">installer</button>
+        </div>
+        
+      </div>
+      <p>
+        <strong class="set_col_purp"><br>Partie vaisseau: <br></strong>
+            Le vaisseau suit le concept de fluidité sur lequel tout le jeu est basé, c'est à dire qu'au lieu de nettoyer tout l'écran, on va effacer l'endroit ou se situe
+            le vaisseau, et l'afficher a nouveau a X+1 ou X-1 si le joueur demande un déplacement.<br>
+            Le modèle de récéption d'entrée est très simple : J'ai fait un switch sur la fonction WaitForSingleObject, qui a en argument le stdHandler, et le temps pour timeout, c'est 
+            à dire 1000ms. Couplé a l'utilisation de _khbit() (qui retourne un true si une touche est pressée) on peut facilement gérer les déplacements de l'utilisateur
+            sans devoir attendre une action de sa part pour continuer le jeu. 
+        <strong class="set_col_purp"><br>Partie balles: <br></strong>
+            Les balles tirées par le vaisseau sont des objets de classe contenus dans un vecteur. A chaque fois que les balles doivent s'actualiser, un itérateur augmente
+            leur position de +1, si une collision est faite avec un monstre ou que la balle sort de l'écran, l'objet est supprimé du vecteur, et si un monstre a été touché, 
+            on lui fait perdre un point de vie.<br>
+            L'actualisation de la position des balles se fait de la même manière que l'actualisation de la position du vaisseau.
+        <strong class="set_col_purp"><br>Partie Aliens: <br></strong>
+            La partie Aliens est vraiment simple ! J'ai écrit une classe Enemy, et tout les sous-types d'Aliens inhéritent de cette classe, comme ça j'évite de tout réecrire.
+        <strong class="set_col_purp"><br>Partie Système/Ascii: <br></strong>
+            Au niveau de tout ce qui est relatif a la console, il y a une fonction pour définir l'emplacement du curseur, et une autre pour l'afficher ou non. Etant donné qu'il
+            y a beaucoup de réecriture (actualisations des aliens etc..), c'est plus joli quand on ne le voit pas se déplacer de partout !
+            J'ai ajouté un peu d'Ascii pour faire joli, au niveau de l'écran d'accueil, et l'écran de défaite, et enfin, un peu de musique (qui vous rappelera surement des souvenirs).
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2022 Do What The Fuck You Want</p>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+  </body>
+</html>
